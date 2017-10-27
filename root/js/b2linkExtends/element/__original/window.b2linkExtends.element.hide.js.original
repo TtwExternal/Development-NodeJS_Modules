@@ -1,0 +1,29 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2linkExtends/element/window.b2linkExtends.element.hide.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * HTMLElement.style.display = "none";
+ * @function
+ * @param {Boolean} bRemove default:false
+ * @return {HTMLElement}
+ */
+window.b2linkExtends.element.hide = function( bRemove )
+{
+	//////////window.TtwLog.timeStamp( "---- [ S ] - window.b2linkExtends.element.hide():{HTMLElement}----------" );
+	window.b2link.element.hide( this.__el );
+	window.b2link.event.dispatchCE__HIDED_EL( this.__el, { _ : this } );
+
+	if( this.__el.parentElement )
+	{
+		if( bRemove )
+			window.b2link.element.removeChild( this.__el.parentElement, this.__el );
+	}
+	//////////window.TtwLog.timeStamp( "---- [ E ] - window.b2linkExtends.element.hide():{HTMLElement}----------" );
+	return this.__el;
+};
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

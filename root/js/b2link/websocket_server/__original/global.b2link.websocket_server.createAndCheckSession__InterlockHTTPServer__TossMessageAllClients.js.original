@@ -1,0 +1,83 @@
+//----------------------------------------------------------------------------------------------------;
+var fileNm = "js/b2link/websocket_server/global.b2link.websocket_server.createAndCheckSession__InterlockHTTPServer__TossMessageAllClients.js";
+if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * {http.Server}와 연동 시킨 WebSocketServer를 생성한다.
+ * sid(session id), mid(member id)를 체크한다.
+ * 전달되는 모든 메세지를 송/수신 하는 기능
+ *
+ * @function
+ * @param {Object} d
+ * <code>
+	 {
+		"server" : {http.Server}
+	 }
+ * </code>
+ * @return {WebSocketServer} global.REQUIRES.ws.Server
+ *
+ * @dependency global.b2link.websocket_server._getClientConnectionEventListeners
+ *
+ * @example
+ * <code>
+	//{http.Server}와 연동 시킨 WebSocketServer를 생성한다. - port:42322;
+	global.WEBSOCKET_SERVER0 = global.b2link.websocket_server.createAndCheckSession__InterlockHTTPServer__TossMessageAllClients({
+		server : global.server.server.server//{http.Server};
+	});
+ * </code>
+ */
+global.b2link.websocket_server.createAndCheckSession__InterlockHTTPServer__TossMessageAllClients = function( d )
+{
+	global.TtwLog.timeStamp( "---- [ S ] - global.b2link.websocket_server.createAndCheckSession__InterlockHTTPServer__TossMessageAllClients():{WebSocketServer}----------" );
+
+	//d.evt_close = function( code, data ){ debugger; arguments; };
+	//d.evt_error = function(){ debugger; arguments; };
+	d.evt_message = function( message ){
+		d.evt_connection.server.clients.forEach(function( client ){
+			try
+			{
+				if( client.readyState === global.REQUIRES.ws.OPEN )
+					client.send( message );
+			}
+			catch( e )
+			{
+				global.TtwLog.error( "d.evt_message Error : " + e );
+			}
+		});
+	};
+
+	//WebSocketServer에 등록되는 EventListener;
+	d.evt_connection = function( connection, req ){
+
+		var q = global.server.getQueryFromURL( req.url );//URL To Query;
+
+		global.b2link.request.get__checkSessionToSessionServer__WebSocket( req, q.sid, function( result ){
+
+			if( 0 == global.b2link.response.getResultStatus( result ) )
+			{
+				connection.send( "Auth Fail." );
+				connection.close();
+				return;
+			}
+
+			if( d.evt_close ) connection.on( "close", d.evt_close );
+			if( d.evt_error ) connection.on( "error", d.evt_error );
+			connection.on( "message", d.evt_message );
+
+			connection.send( "Connected" );
+		});
+	};
+	d.evt_connection.server;
+
+
+	//{http.Server}와 연동 시킨 WebSocketServer를 생성한다.;
+	var t = d.evt_connection.server = global.b2link.websocket_server.create__InterlockHTTPServer( d );
+
+	global.TtwLog.timeStamp( "---- [ E ] - global.b2link.websocket_server.createAndCheckSession__InterlockHTTPServer__TossMessageAllClients():{WebSocketServer}----------return t;" );
+	return t;
+};
+
+//----------------------------------------------------------------------------------------------------;
+if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

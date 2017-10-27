@@ -1,0 +1,37 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2link/eventDetail/window.b2link.eventDetail.TABLE_DATA_CHANGED.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * Table Component에서 Data 변경 시에 발생되는 이벤트
+ * 사용시 문의 및 협의 바람(송선우)
+ * @function
+ * @param {Object} d
+ * <code>
+ * {
+ *	"firstItem" : {Object}
+ *	, "lastItem" : {Object}
+ * }
+ * </code>
+ */
+window.b2link.eventDetail.TABLE_DATA_CHANGED = function( d )
+{
+	//////////window.TtwLog.timeStamp( "---- [ S ] - window.b2link.eventDetail.TABLE_DATA_CHANGED():void----------" );
+	//////////window.TtwLog.timeStamp( "---- [ E ] - window.b2link.eventDetail.TABLE_DATA_CHANGED():void----------" );
+
+	//*///주석하기 - EventDetail;
+	//if( !d.firstItem || !d.lastItem )
+	if( !d.hasOwnProperty( "firstItem" ) || !d.hasOwnProperty( "lastItem" ) )
+	{
+		//debugger;
+		window.TtwLog.error( "window.b2link.eventDetail.TABLE_DATA_CHANGED Error : event Values가 부족합니다." );
+	}
+	//*/
+
+	return d;
+};
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

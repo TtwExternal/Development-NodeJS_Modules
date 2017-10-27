@@ -1,0 +1,48 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2link/ui_resource/window.b2link.ui_resource.reqSync_JSON_Locale.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * url에서 .js를 .json으로 변경 후 ***. 'type' .local.**.json 파일을 불러와 JSON 문자열을 Object로 만든 후 Return 한다.
+ * @function
+ * @param {String} url ./ui/.../.../***.js
+ * @param {String} type "alert", "confirm", "label", "message", "tooltip"
+ * @return {Object}
+ */
+window.b2link.ui_resource.reqSync_JSON_Locale = function( url, type )
+{
+	//window.TtwLog.timeStamp( "---- [ S ] - window.b2link.ui_resource.reqSync_JSON_Locale():{Object}----------" );
+
+	//console.log( "url0 : " + url );
+
+	url = url.replace( ".js", "." + type + ".locale." + window.b2link.STATIC.CONFIG.URL.UI.LOCALE + ".json" );
+
+	//console.log( "url1 : " + url );
+
+	var o;
+	try
+	{
+		o = window.b2link.xhr.reqSync_JSON( url );
+	}
+	catch( e )
+	{
+		window.TtwLog.error( "window.b2link.ui_resource.reqSync_JSON_Locale " + type + "Error : " + e );
+		o = null;
+	}
+
+	console.log( o );
+
+	//window.TtwLog.timeStamp( "---- [ E ] - window.b2link.ui_resource.reqSync_JSON_Locale():{Object}----------" );
+
+	return o;
+};
+window.b2link.ui_resource.reqSync_JSON_Locale.alert = function( url ){ return window.b2link.ui_resource.reqSync_JSON_Locale( url, "alert" ); };
+window.b2link.ui_resource.reqSync_JSON_Locale.confirm = function( url ){ return window.b2link.ui_resource.reqSync_JSON_Locale( url, "confirm" ); };
+window.b2link.ui_resource.reqSync_JSON_Locale.label = function( url ){ return window.b2link.ui_resource.reqSync_JSON_Locale( url, "label" ); };
+window.b2link.ui_resource.reqSync_JSON_Locale.message = function( url ){ return window.b2link.ui_resource.reqSync_JSON_Locale( url, "message" ); };
+window.b2link.ui_resource.reqSync_JSON_Locale.tooltip = function( url ){ return window.b2link.ui_resource.reqSync_JSON_Locale( url, "tooltip" ); };
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

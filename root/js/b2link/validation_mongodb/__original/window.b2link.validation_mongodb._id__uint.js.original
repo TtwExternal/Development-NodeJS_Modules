@@ -1,0 +1,24 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2link/validation_mongodb/window.b2link.validation_mongodb._id__uint.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * MongoDB의 db.collection._id가 uint일 경우 validation 한다.
+ * @function
+ * @param {uint} _id
+ * @return {Boolean}
+ */
+window.b2link.validation_mongodb._id__uint = function( _id )
+{
+	//window.TtwLog.timeStamp( "---- [ S ] - window.b2link.validation_mongodb._id__uint():{Boolean}----------" );
+	//window.TtwLog.timeStamp( "---- [ E ] - window.b2link.validation_mongodb._id__uint():{Boolean}----------" );
+	if( window.b2link.validation_classType.uint( _id ) )
+		if( 999999999 > _id )
+			return true;
+	return false;
+};
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

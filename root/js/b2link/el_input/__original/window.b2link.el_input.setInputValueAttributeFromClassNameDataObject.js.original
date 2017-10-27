@@ -1,0 +1,25 @@
+//----------------------------------------------------------------------------------------------------;
+var fileNm = "js/b2link/el_input/window.b2link.el_input.setInputValueAttributeFromClassNameDataObject.js";
+if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * @function
+ * @param {HTMLElement} t el_div
+ * @param {Object} d
+ */
+window.b2link.el_input.setInputValueAttributeFromClassNameDataObject = function( t, d )
+{
+	window.JamesLog.timeStamp( "---- [ S ] - window.b2link.el_input.setInputValueAttributeFromClassNameDataObject():void----------" );
+
+	var f = window.b2link.element.getElementByClassName;
+
+	for( var p in d )
+		if( f( t, p ) && f( t, p ).value != undefined ) f( t, p ).setAttribute( "value", d[ p ] );
+
+	window.JamesLog.timeStamp( "---- [ E ] - window.b2link.el_input.setInputValueAttributeFromClassNameDataObject():void----------" );
+};
+
+//----------------------------------------------------------------------------------------------------;
+if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

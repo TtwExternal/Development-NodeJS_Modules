@@ -1,0 +1,28 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2link/validation_input/window.b2link.validation_input.phone_cell.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * @function
+ * @param {String} country
+ * @param {String} area
+ * @param {String} num0
+ * @param {String} num1
+ * @return {Object} { r : {Boolean}, m : {String} } r - result, m - message
+ */
+window.b2link.validation_input.phone_cell = function( country, area, num0, num1 )
+{
+	//window.TtwLog.timeStamp( "---- [ S ] - window.b2link.validation_input.phone_cell():{Object}----------" );
+
+	var r = { r : 1, m : "" };
+
+	if( !country || !area || !num0 || !num1 ){ r.r = 0; r.m = "휴대전화번호 입력오류"; return r; }
+
+	//window.TtwLog.timeStamp( "---- [ E ] - window.b2link.validation_input.phone_cell():{Object}----------" );
+	return r;
+};
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

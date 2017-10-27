@@ -1,0 +1,119 @@
+//----------------------------------------------------------------------------------------------------;
+var fileNm = "js/b2link/websocket_browser/window.b2link.websocket_browser.connectAndCheckSession.js";
+if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * WebSocket을 생성하여 WebSocketServer과 연결한다.
+ * sid(session id)와 mid(member id)를 체크한다.
+ * @function
+ * @param {Object} d
+ * <code>
+	{
+		"host" : ""
+		, "port" : NaN
+		, "protocol" : null
+
+		, "evt_close" : function( e ){ debugger; arguments; }
+		, "evt_error" : function( e ){ debugger; arguments; }
+		, "evt_message" : function( e ){ console.log( "Message : " + e.data ); debugger; arguments; }
+		, "evt_open" : function( e ){ debugger; arguments; }
+	}
+ * </code>
+ * @return {WebSocket}
+ *
+ * @example
+ * <code>
+	window.b2link.websocket_browser.connectAndCheckSession__MessageBox_message({
+		host : "localhost"
+		, port : 42322
+
+		, evt_close : function( e ){ debugger; arguments; }
+		, evt_error : function( e ){ debugger; arguments; }
+		, evt_message : function( e ){ console.log( "Message : " + e.data ); debugger; arguments; }
+		, evt_open : function( e ){ debugger; arguments; }
+	});
+ * </code>
+ */
+window.b2link.websocket_browser.connectAndCheckSession = function( d )
+{
+	window.TtwLog.timeStamp( "---- [ S ] - window.b2link.websocket_browser.connectAndCheckSession():{WebSocket}----------" );
+
+	if( !d.host )
+	{
+		window.b2link_ui.message.error( "window.b2link.websocket_browser.connectAndCheckSession Error : host 정의 필수" );
+		return;
+	}
+
+	if( !d.port )
+	{
+		window.b2link_ui.message.error( "window.b2link.websocket_browser.connectAndCheckSession Error : port 정의 필수" );
+		return;
+	}
+
+	if( !d.evt_message )
+	{
+		window.b2link_ui.message.error( "window.b2link.websocket_browser.connectAndCheckSession Error : evt_message 정의 필수" );
+		return;
+	}
+
+	var _evt_message = d.evt_message ? d.evt_message : function( e ){ console.log( "Message : " + e.data ); debugger; arguments; };
+	var _evt_open = d.evt_open ? d.evt_open : function( e ){ console.log( "Open" ); debugger; arguments; };
+	var _evt_error = d.evt_error ? d.evt_error : function( e ){
+		debugger;
+		var t = arguments.callee.__webSocket;
+			t.removeEventListener( "close", _evt_close, false );
+			t.removeEventListener( "error", _evt_error, false );
+			t.removeEventListener( "message", _evt_message, false );
+			t.removeEventListener( "open", _evt_open, false );
+	};
+	var _evt_close = d.evt_close ? d.evt_close : function( e ){
+		debugger;
+		var t = arguments.callee.__webSocket;
+			t.removeEventListener( "close", _evt_close, false );
+			t.removeEventListener( "error", _evt_error, false );
+			t.removeEventListener( "message", _evt_message, false );
+			t.removeEventListener( "open", _evt_open, false );
+	};
+
+	try
+	{
+		/*/
+		var t = new window.WebSocket( "ws://" + d.host + ":" + d.port );//clientWebSocket;
+		/*/
+		var session = window.b2link.session.getSession();
+		if( !session.mid )
+		{
+			window.b2link_ui.message.error( "WebSocket 연결 실패 - mid가 없다" );
+			return;
+		}
+
+		if( !session.sid )
+		{
+			window.b2link_ui.message.error( "WebSocket 연결 실패 - sid가 없다" );
+			return;
+		}
+
+		var t = new window.WebSocket( "ws://" + d.host + ":" + d.port + "?sid=" + session.sid + "&mid=" + session.mid );//clientWebSocket;
+		//*/
+
+		_evt_close.__webSocket = _evt_error.__webSocket = t;
+
+		t.addEventListener( "close", _evt_close, false, 0, true );
+		t.addEventListener( "error", _evt_error, false, 0, true );
+		t.addEventListener( "message", _evt_message, false, 0, true );
+		t.addEventListener( "open", _evt_open, false, 0, true );
+	}
+	catch( e )
+	{
+		window.b2link_ui.message.error( "window.b2link.websocket_browser.connectAndCheckSession Error : " + e );
+	}
+
+	window.TtwLog.timeStamp( "---- [ E ] - window.b2link.websocket_browser.connectAndCheckSession():{WebSocket}----------return t;" );
+	return t;
+	//*/
+};
+
+//----------------------------------------------------------------------------------------------------;
+if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

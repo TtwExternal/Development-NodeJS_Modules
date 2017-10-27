@@ -1,0 +1,45 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2link/element/window.b2link.element.injectValueForListItemsAndIDX.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+(function(){
+	var _f = window.b2link.element.injectValueForListItem;
+
+	/**
+	 * $data에 $idx property를 생성해서 데이터의 index 값을 주입한다.
+	 * element에 children 객체에 주어진 Array Data[ i ]를 "list_item_value" instance명으로 주입한다.
+	 * @function
+	 * @param {HTMLElement} t HTMLElement
+	 * @param {Array} data
+	 */
+	window.b2link.element.injectValueForListItemsAndIDX = function( t, data )
+	{
+		//////////window.TtwLog.timeStamp( "---- [ S ] - window.b2link.element.injectValueForListItemsAndIDX():void----------" );
+
+		var a;
+		//<Style>가 들어있는 케이스;
+		if( t.children[ 0 ] && "STYLE" == t.children[ 0 ].tagName )
+		{
+			a = [];
+			var b = t.children;
+			var i=0, iLen=b.length;
+			for( ; i<iLen; ++i ) if( "STYLE" != b[ i ].tagName ) a.push( b[ i ] );
+		}
+		else a = t.children;
+
+		var i=0, iLen=( a.length > data.length ) ? data.length : a.length;
+		for( ; i<iLen; ++i )
+		{
+			data[ i ].$idx = i;
+			_f( a[ i ], data[ i ] );
+		}
+
+		//////////window.TtwLog.timeStamp( "---- [ E ] - window.b2link.element.injectValueForListItemsAndIDX():void----------" );
+	};
+	window.b2link.element.injectValueForListItemsAndID = window.b2link.element.injectValueForListItemsAndIDX;
+})();
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

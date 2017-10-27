@@ -1,0 +1,39 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2link/ui/window.b2link.ui.getObject_ClassNameAndValueFromParentElement__Controller.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * @function
+ * @param {HTMLElement} t
+ * @return {Object}
+ */
+window.b2link.ui.getObject_ClassNameAndValueFromParentElement__Controller = function( t )
+{
+	window.KaiLog.timeStamp( "---- [ S ] - window.b2link.ui.getObject_ClassNameAndValueFromParentElement__Controller():{Object}----------" );
+
+	var r = {};
+	var a = t.children;
+	var io;
+	var i=0, iLen=a.length;
+	for( ; i<iLen; ++i )
+	{
+		io = a[ i ];
+		switch (io.tagName) {
+		case 'INPUT':
+		case 'TEXTAREA':
+			r[ io.className ] = io.value;
+			break;
+		default:
+			break;
+		}
+	}
+
+	window.KaiLog.timeStamp( "---- [ E ] - window.b2link.ui.getObject_ClassNameAndValueFromParentElement__Controller():{Object}----------" );
+
+	return r;
+};
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

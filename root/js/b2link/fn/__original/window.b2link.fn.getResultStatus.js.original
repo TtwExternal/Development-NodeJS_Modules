@@ -1,0 +1,5 @@
+window.b2link.fn.getResultStatus = function( result ){
+	window.b2link_ui.message.error( "window.b2link.fn.getResultStatus -> window.b2link.response.getResultStatus 교체 바람" );
+	debugger;
+	return window.b2link.response.getResultStatus( result );
+};

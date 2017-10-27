@@ -1,0 +1,1 @@
+return db.getSiblingDB( "<!=nm_db=!>" ).getCollection( "<!=nm_col=!>" ).find().count();

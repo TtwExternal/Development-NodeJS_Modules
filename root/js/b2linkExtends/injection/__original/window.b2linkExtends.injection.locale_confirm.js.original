@@ -1,0 +1,43 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2linkExtends/injection/window.b2linkExtends.injection.locale_confirm.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * 동일 폴더에 js 파일 명이 add.js라고 한다면 add.confirm.locale.kr.json 형태로 파일명을 생성해야한다.
+ * @function
+ * @param {HTMLElement} el
+ * @param {Object} elCtrl
+ * @example
+ * <code>
+	//*.js 파일의 최상단에서
+	//Extends;
+	var _this = window.b2linkUIClass.container.Panel( url, $el );
+
+	//Extends - Injection;
+	window.b2linkExtends.injection.locale_alert( el, _this );
+	window.b2linkExtends.injection.locale_confirm( el, _this );
+	window.b2linkExtends.injection.locale_label( el, _this );
+	window.b2linkExtends.injection.locale_message( el, _this );
+	window.b2linkExtends.injection.locale_tooltip( el, _this );
+ * </code>
+ */
+window.b2linkExtends.injection.locale_confirm = function( el, elCtrl )
+{
+	//////////window.TtwLog.timeStamp( "---- [ S ] - window.b2linkExtends.injection.locale_confirm():void----------" );
+
+	if( !elCtrl ) if( el.js ) elCtrl = el.js;
+	if( !elCtrl )
+	{
+		window.TtwLog.error( "window.b2linkExtends.injection.locale_confirm Error : undefine HTMLElement's Controller(JS Object)" );
+	}
+
+	elCtrl.$locale = elCtrl.$locale ? elCtrl.$locale : {};
+	elCtrl.$locale.confirm = window.b2link.ui_resource.reqSync_JSON_Locale.confirm( elCtrl.__url );
+
+	//////////window.TtwLog.timeStamp( "---- [ E ] - window.b2linkExtends.injection.locale_confirm():void----------" );
+};
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

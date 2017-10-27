@@ -1,0 +1,24 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2link/event/window.b2link.event.dispatchCE__DATA_WRITE_COMPLETE.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * Event 객체로 넘길 data 추가 정의 해야 함.
+ * 사용시 문의 및 협의 바람(송선우)
+ * @function
+ * @param {HTMLElement} el
+ * @param {window.b2link.eventDetail.DATA_WRITE_COMPLETE} evtDetail
+ */
+window.b2link.event.dispatchCE__DATA_WRITE_COMPLETE = function( el, evtDetail )
+{
+	//////////window.TtwLog.timeStamp( "---- [ S ] - window.b2link.event.dispatchCE__DATA_WRITE_COMPLETE():void----------" );
+
+	window.b2link.event.dispatchCustomEvent( el, window.b2link.event.DATA_WRITE_COMPLETE, evtDetail );
+
+	//////////window.TtwLog.timeStamp( "---- [ E ] - window.b2link.event.dispatchCE__DATA_WRITE_COMPLETE():void----------" );
+};
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

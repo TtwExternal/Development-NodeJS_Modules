@@ -1,0 +1,71 @@
+//----------------------------------------------------------------------------------------------------;
+var fileNm = "js/b2link/websocket_browser/window.b2link.websocket_browser.connectAndCheckSession__MessageBox_message.js";
+if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * WebSocket을 생성하여 WebSocketServer과 연결한다.
+ * 모든 메세지가 전체 송/수신 되는 기능
+ * sid(session id)와 mid(member id)를 체크한다.
+ * @function
+ * @param {Object} d
+ * <code>
+	{
+		"host" : ""
+		, "port" : NaN
+		, "protocol" : null
+	}
+ * </code>
+ * @return {WebSocket}
+ *
+ * @example
+ * <code>
+	window.WS0 = window.b2link.websocket_browser.connectAndCheckSession__MessageBox_message({
+		host : "localhost"
+		, port : 42322
+	});
+ * </code>
+ */
+window.b2link.websocket_browser.connectAndCheckSession__MessageBox_message = function( d )
+{
+	window.TtwLog.timeStamp( "---- [ S ] - window.b2link.websocket_browser.connectAndCheckSession__MessageBox_message():{WebSocket}----------" );
+
+	/*/
+	d.evt_close = function( e ){
+		console.log( "Close" );
+	};
+
+	d.evt_error = function( e ){
+		console.log( "Error" );
+	};
+	//*/
+
+	d.evt_message = function( e ){
+		try
+		{
+			var obj = JSON.parse( e.data );
+			window.b2link_ui.message[ obj.type ]( obj.data );
+		}
+		catch( er )
+		{
+			var message = e.data;
+			console.log( "Message : " + message );
+			window.b2link_ui.message.message( message );
+		}
+	};
+
+	d.evt_open = function( e ){
+		//debugger;
+		console.log( "Open" );
+	};
+
+	//WebSocket을 생성하여 WebSocketServer과 연결한다.;
+	var t = window.b2link.websocket_browser.connectAndCheckSession( d );//clientWebSocket;
+
+	window.TtwLog.timeStamp( "---- [ E ] - window.b2link.websocket_browser.connectAndCheckSession__MessageBox_message():{WebSocket}----------return t;" );
+	return t;
+};
+
+//----------------------------------------------------------------------------------------------------;
+if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

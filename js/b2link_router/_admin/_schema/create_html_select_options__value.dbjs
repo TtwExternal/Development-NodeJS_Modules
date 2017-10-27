@@ -1,0 +1,22 @@
+var r = {};
+
+var scs = db.getSiblingDB( "_schema" ).getCollection( "<!=dbNm=!>" )
+	.findOne({ _id : "<!=colNm=!>" }).search_field;
+
+var i=0, iLen=scs.length;
+for( ; i<iLen; ++i ) r[ scs[ i ].property ] = [];
+
+db.getSiblingDB( "<!=dbNm=!>" ).getCollection( "<!=colNm=!>" )
+	.find({}).forEach( function( doc ){
+		var i=0, iLen=scs.length;
+		for( ; i<iLen; ++i )
+		{
+			var propNm = scs[ i ].property;
+			var io = { _id : doc._id };
+				io[ propNm ] = doc[ propNm ];
+			if( doc.cd ) io.cd = doc.cd;
+			r[ propNm ].push( io );
+		}
+	});
+
+return r;

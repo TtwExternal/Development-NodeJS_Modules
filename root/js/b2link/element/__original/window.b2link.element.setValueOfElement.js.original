@@ -1,0 +1,75 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2link/element/window.b2link.element.setValueOfElement.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+(function(){
+	/**
+	 * targetElement의 value를 set 한다.
+	 * @function
+	 * @param {HTMLElement} t HTMLElement
+	 * @param {String} value
+	 */
+	window.b2link.element.setValueOfElement = function( t, value )
+	{
+		//window.AlexLog.timeStamp( "---- [ S ] - window.b2link.element.setValueOfElement():void----------" );
+
+		var key = ( t.tagName == "INPUT" ) ? "_fn_" + t.type : "_fn_" + t.tagName.toLowerCase();
+		var r = window.b2link.element.setValueOfElement[ key ]( t, value );
+
+		//window.AlexLog.timeStamp( "---- [ E ] - window.b2link.element.setValueOfElement():void----------" );
+	};
+
+	var _ = window.b2link.element.setValueOfElement;
+		_[ "_fn_button"   ] = function( t, value ){ t.value = value; };
+		_[ "_fn_color"    ] = function( t, value ){ t.value = value; };
+		_[ "_fn_email"    ] = function( t, value ){ t.value = value; };
+		_[ "_fn_file"     ] = function( t, value ){ t.value = value; };
+		_[ "_fn_hidden"   ] = function( t, value ){ t.value = value; };
+		_[ "_fn_image"    ] = function( t, value ){ t.value = value; };
+		_[ "_fn_month"    ] = function( t, value ){ t.value = value; };
+		_[ "_fn_number"   ] = function( t, value ){ t.value = value; };
+		_[ "_fn_password" ] = function( t, value ){ t.value = value; };
+		_[ "_fn_range"    ] = function( t, value ){ t.value = value; };
+		_[ "_fn_reset"    ] = function( t, value ){ t.value = value; };
+		_[ "_fn_search"   ] = function( t, value ){ t.value = value; };
+		_[ "_fn_submit"   ] = function( t, value ){ t.value = value; };
+		_[ "_fn_tel"      ] = function( t, value ){ t.value = value; };
+		_[ "_fn_text"     ] = function( t, value ){ t.value = value; };
+		_[ "_fn_time"     ] = function( t, value ){ t.value = value; };
+		_[ "_fn_url"      ] = function( t, value ){ t.value = value; };
+		_[ "_fn_week"     ] = function( t, value ){ t.value = value; };
+		_[ "_fn_date"     ] = function( t, value ){ t.value = value; };
+		_[ "_fn_datetime" ] = function( t, value ){ t.value = value; };
+		_[ "_fn_datetime-local" ] = function( t, value ){ t.value = value; };
+
+		_[ "_fn_checkbox" ] = function( t, value ){ t.checked = Boolean(value); };
+
+		_[ "_fn_radio" ] = function( a, value ){
+			var i=0, iLen=a.length;
+
+			if( !Boolean(value) ){ a.value = null; }
+
+			for( ; i<iLen; ++i )
+			{
+				if( a[i].value == value ){
+					a[i].checked = true;
+					a.value = value;
+				}
+				else
+				{
+					a[i].checked = false;
+				}
+			}
+		};
+
+		_[ "_fn_textarea" ] = function( t, value ){ t.value = value; };
+		_[ "_fn_select"   ] = function( t, value ){ t.value = value; };
+		_[ "_fn_datalist" ] = function( t, value ){ t.value = value; };
+		_[ "_fn_output"   ] = function( t, value ){ t.value = value; };
+		_[ "_fn_keygen"   ] = function( t, value ){ t.value = value; };
+})();
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

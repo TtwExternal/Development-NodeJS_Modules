@@ -1,0 +1,44 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2link/html/window.b2link.html.applyBrace_children__innerHTML.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * [[nm]] 형태의 문자열을 Object의 value로 치환한다.
+ * element.children의 innerHTML이 갱신된다.
+ * __originalInnerHTML은 무시하고 현재 innerHTML로 갱신한다.
+ * @function
+ * @param {HTMLElement} el
+ * @param {Object} o { "nm" : "_id", "w" : 10 }
+ * @return {HTMLElement}
+ */
+window.b2link.html.applyBrace_children__innerHTML = function( el, o )
+{
+	//window.TtwLog.timeStamp( "---- [ S ] - window.b2link.html.applyBrace_children__innerHTML():{HTMLElement}----------" );
+
+	var f = SUtilString.applyBraceStrFromObj__NV_NA;
+	var a = el.children;
+	var io;
+	var i=0, iLen=a.length;
+	for( ; i<iLen; ++i )
+	{
+		io = a[ i ];
+		io.__originalInnerHTML = io.innerHTML;
+		try{ var r = f( io.__originalInnerHTML, o ); }
+		catch( e )
+		{
+			//io.__originalInnerHTML에 잘못 정의된 property name이 존재해서 발생함;
+			window.TtwLog.error( "window.b2link.html.applyBrace_children__innerHTML Error : " + e );
+			window.TtwLog.error( "io.__originalInnerHTML에 잘못 정의된 property name이 존재해서 발생함" );
+		}
+		//console.log( r );
+		if( r ) io.innerHTML = r;
+	}
+
+	//window.TtwLog.timeStamp( "---- [ E ] - window.b2link.html.applyBrace_children__innerHTML():{HTMLElement}----------return el;" );
+	return el;
+};
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

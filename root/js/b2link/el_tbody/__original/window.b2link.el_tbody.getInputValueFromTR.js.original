@@ -1,0 +1,34 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2link/el_tbody/window.b2link.el_tbody.getInputValueFromTR.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * @function
+ * @param {HTMLElement} t tr
+ * @return {Object} {}
+ */
+window.b2link.el_tbody.getInputValueFromTR = function( t )
+{
+	window.TtwLog.timeStamp( "---- [ S ] - window.b2link.el_tbody.getInputValueFromTR():{Object}----------" );
+
+	var f = window.b2link.el_input.setObjectInputValueFromInputTypeAndClassName;
+
+	var r = {};
+	var a = t.getElementsByTagName( "INPUT" );
+	var io;
+	var i=0, iLen=a.length;
+	for( ; i<iLen; ++i )
+	{
+		io = a[ i ];//HTMLInputElement;
+		f( r, io );
+	}
+
+	console.log( r );
+	window.TtwLog.timeStamp( "---- [ E ] - window.b2link.el_tbody.getInputValueFromTR():{Object}----------" );
+	return r;
+};
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

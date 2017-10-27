@@ -1,0 +1,45 @@
+var a = [
+	"administrator"
+	, "schedule"
+	, "settlement"
+	, "stock"
+	, "transaction"
+	, "transaction_purchase_order_purchase"
+	, "transaction_purchase_order_sale"
+	, "transaction_purchase_return"
+	, "transaction_sale_return"
+	, "transaction_stock_release"
+	, "transaction_stock_wearing"
+];
+
+var r = {};
+
+var db0;
+
+var io;
+var i=0, iLen=a.length;
+for( ; i<iLen; ++i )
+{
+	io = a[ i ];
+	db0 = db.getSiblingDB( io );
+	r[ io ] = {};
+	var cols = db0.getCollectionNames();
+	var colNm;
+	var col;
+	var jo;
+	var j=0, jLen=cols.length;
+	for( ; j<jLen; ++j )
+	{
+		colNm = cols[ j ];
+		if( "system.js" == colNm ) continue;
+		print( io + "." + colNm );
+		jo = r[ io ][ colNm ] = [];
+		col = db0.getCollection( colNm );
+		col.find({}).forEach(function( doc ){ jo.push( doc ); });
+	}
+}
+
+
+printjson( r );
+
+return r;

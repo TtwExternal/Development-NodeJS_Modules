@@ -1,0 +1,23 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2link/validation_classType/window.b2link.validation_classType.object.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * Javascript의 자료타입 Object를 Validation 한다.
+ * @function
+ * @param {Number} p
+ * @return {Boolean}
+ */
+window.b2link.validation_classType.object = function( p )
+{
+	//window.TtwLog.timeStamp( "---- [ S ] - window.b2link.validation_classType.object():{Boolean}----------" );
+	//window.TtwLog.timeStamp( "---- [ E ] - window.b2link.validation_classType.object():{Boolean}----------" );
+
+	if( "object" == typeof( p ) ) return true;
+	return false;
+};
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

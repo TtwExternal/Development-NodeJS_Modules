@@ -1,0 +1,34 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2link/eventDetail/window.b2link.eventDetail.LIST_DATA_CHANGED.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * LIST형 Component에서 Data 변경 시에 발생되는 이벤트
+ * @function
+ * @param {Object} d
+ * <code>
+ * {
+ *	"firstItem" : {Object}
+ *	, "lastItem" : {Object}
+ * }
+ * </code>
+ */
+window.b2link.eventDetail.LIST_DATA_CHANGED = function( d )
+{
+	//////////window.TtwLog.timeStamp( "---- [ S ] - window.b2link.eventDetail.LIST_DATA_CHANGED():void----------" );
+	//////////window.TtwLog.timeStamp( "---- [ E ] - window.b2link.eventDetail.LIST_DATA_CHANGED():void----------" );
+
+	if( !d.firstItem
+		|| !d.lastItem )
+	{
+		//debugger;
+		window.Rh2Log.error( "window.b2link.eventDetail.LIST_DATA_CHANGED Error : event Values가 부족합니다." );
+	}
+
+	return d;
+};
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

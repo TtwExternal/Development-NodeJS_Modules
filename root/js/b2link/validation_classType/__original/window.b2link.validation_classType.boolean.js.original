@@ -1,0 +1,23 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2link/validation_classType/window.b2link.validation_classType.boolean.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * Javascript의 자료타입 Boolean을 Validation 한다.
+ * @function
+ * @param {Number} p
+ * @return {Boolean}
+ */
+window.b2link.validation_classType.boolean = function( p )
+{
+	//window.TtwLog.timeStamp( "---- [ S ] - window.b2link.validation_classType.boolean():{Boolean}----------" );
+	//window.TtwLog.timeStamp( "---- [ E ] - window.b2link.validation_classType.boolean():{Boolean}----------" );
+
+	if( "boolean" == typeof( p ) ) return true;
+	return false;
+};
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

@@ -1,0 +1,39 @@
+//----------------------------------------------------------------------------------------------------;
+var fileNm = "js/b2link/fn/window.b2link.fn.get__b2link_service_.js";
+if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * @function
+ * @param {String} nm_db
+ * @param {String} nm_col
+ */
+window.b2link.fn.get__b2link_service_ = function( nm_db, nm_col )
+{
+	window.TtwLog.timeStamp( "---- [ S ] - window.b2link.fn.get__b2link_service_():void----------" );
+
+	try
+	{
+		/*/
+		window.b2link_service.common._fn_req( _url, cbFunction );
+		/*/
+		//cbFunction( window.b2link.fn.get__b2link_service_[ "_" + nm_db ][ nm_col ]() );
+		//cbFunction( window[ "b2link_service_" + nm_db ][ nm_col ].getDocPropsForSearchType() );
+		return window[ "b2link_service_" + nm_db ][ nm_col ].getDocPropsForSearchType;
+		//*/
+	}
+	catch( e )
+	{
+		window.b2link_ui.message.error( "window.b2link.fn.get__b2link_service_ Error : " + e );
+		window.b2link_ui.message.error( "window.b2link.fn.get__b2link_service_ Error : " + e );
+		window.b2link_ui.message.error( "window.b2link.fn.get__b2link_service_ Error : " + e );
+		window.b2link_ui.message.error( "window.b2link.fn.get__b2link_service_ Error : " + e );
+		window.b2link_ui.message.error( "window.b2link.fn.get__b2link_service_ Error : " + e );
+	}
+
+	window.TtwLog.timeStamp( "---- [ E ] - window.b2link.fn.get__b2link_service_():void----------" );
+};
+
+//----------------------------------------------------------------------------------------------------;
+if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

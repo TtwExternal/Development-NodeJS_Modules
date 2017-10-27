@@ -1,0 +1,311 @@
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_form__input_elements?", function( d ){} );
+
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_input__dbs_cols?", function( d ){} );
+
+
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__search_field?", function( d ){} );
+
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__search_field_locale?", function( d ){} );
+
+
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_selector_list_li?", function( d ){} );
+
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_selector_list_roll_li?", function( d ){} );
+
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_js_selector_list_roll_itemrenderer?", function( d ){} );
+
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_selector_table_th?", function( d ){} );
+
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_selector_table_td?", function( d ){} );
+
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_js_selector_table_roll_itemrenderer?", function( d ){} );
+
+
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_testMenu__selector?", function( d ){} );
+
+
+
+
+
+
+
+
+
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_cost_adjustment", function( d ){} );
+
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_delivery_info_remark", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_delivery_status", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_delivery_type", function( d ){} );
+
+
+
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_division", function( d ){} );
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_division_team", function( d ){} );
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_division_team_B2Labs", function( d ){} );
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_division_team_BID", function( d ){} );
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_division_team_BOD", function( d ){} );
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_division_team_BSD", function( d ){} );
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_division_team_SSD", function( d ){} );
+
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_division", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_division_part_BID_BD", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_division_part_BID_MKT", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_division_part_BID_PP", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_division_part_BID_SA ", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_division_part_BLS_DEV", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_division_part_BSD_BM", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_division_part_BSD_IS", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_division_part_BSD_LOG", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_division_part_BSD_OFL", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_division_part_BSD_ONL", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_division_part_BSD_SO", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_division_team_BID", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_division_team_BLS", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_division_team_BSD", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_division_team_SHI", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_division_team_SSD", function( d ){} );
+
+
+
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_expenses_proof", function( d ){} );
+
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_expiration_date_status", function( d ){} );
+
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_fi_approbation", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_fi_reject_reason", function( d ){} );
+
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_inspection_detail_type", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_inspection_type", function( d ){} );
+
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_member_rank", function( d ){} );
+
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_packaging_material_unit", function( d ){} );
+
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_partner", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_partner_buyer", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_partner_logistics", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_partner_supplier", function( d ){} );
+
+
+//----------;
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_class", function( d ){} );
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_detail", function( d ){} );
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_type", function( d ){} );
+
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_detail_CPT001", function( d ){} );
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_detail_CPT002", function( d ){} );
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_detail_CPT003", function( d ){} );
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_detail_CPT004", function( d ){} );
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_detail_CPT005", function( d ){} );
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_detail_CPT006", function( d ){} );
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_detail_CPT007", function( d ){} );
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_detail_CPT008", function( d ){} );
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_detail_CPT009", function( d ){} );
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_detail_CPT010", function( d ){} );
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_detail_CPT011", function( d ){} );
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_detail_CPT012", function( d ){} );
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_detail_CPT013", function( d ){} );
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_type_CPC001", function( d ){} );
+//----------;
+
+
+//----------;
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_001", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_002_CP000", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_002_CP001", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_002_CP002", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP000", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP001", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP002", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP003", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP004", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP005", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP006", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP007", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP000", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP001", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP002", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP003", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP004", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP005", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP006", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP007", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP008", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP009", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP010", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP011", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP012", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP013", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP014", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP015", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP016", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP017", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP018", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP019", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP020", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP021", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP022", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP023", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP024", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP025", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP026", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP027", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP028", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP029", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP030", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP031", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP032", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP033", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP034", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP035", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP036", function( d ){} );
+//window.b2link_service.common._fn_req( //window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_004_CP037", function( d ){} );
+//----------;
+
+
+//----------;
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_000", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_001_CP000", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_001_CP001", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_001_CP002", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_002_CP000000", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_002_CP000001", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_002_CP000002", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_002_CP000003", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_002_CP001000", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_002_CP001001", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_002_CP002000", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_002_CP002001", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP000000000", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP000000001", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP000000002", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP000000003", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP000000004", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP000000005", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP000000006", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP000000007", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP000000008", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP000001000", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP000001001", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP000001002", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP000001003", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP000001004", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP000002000", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP000002001", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP000002002", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP000002003", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP000002004", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP000002005", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP000002006", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP000002007", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP000003000", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP000003001", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP001000000", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP001001000", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP001001001", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP001001002", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP001001003", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP001001004", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP001001005", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP001001006", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP001001007", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP001001008", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP001001009", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP002000000", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP002000001", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_depth_003_CP002001000", function( d ){} );
+//----------;
+
+
+
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_status", function( d ){} );
+
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_product_flaw_status", function( d ){} );
+
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_purchase_reason", function( d ){} );
+
+
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_release_operation_packaging_material", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_release_operation_range", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_release_operation_type", function( d ){} );
+
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_request_result", function( d ){} );
+
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_sale_reason", function( d ){} );
+
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_stock_merge_status", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_stock_transfer_status", function( d ){} );
+
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_tax_included", function( d ){} );
+
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_transaction_entity", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_transaction_result", function( d ){} );
+
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=category&colNm=category_update_reason", function( d ){} );
+
+
+
+
+
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=company&colNm=company_info_basic", function( d ){} );
+
+
+
+
+
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=contract_purchase&colNm=contract_purchase_common_info", function( d ){} );
+
+
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=contract_sale&colNm=contract_sale_b2b", function( d ){} );
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=contract_sale&colNm=contract_sale_b2c", function( d ){} );
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=contract_sale&colNm=contract_sale_consignment", function( d ){} );
+
+
+
+
+
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=information&colNm=exchange_rate", function( d ){} );
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=information&colNm=ingredient", function( d ){} );
+
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=information&colNm=exchange_rate_daily", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=information&colNm=exchange_rate_raw_data", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=information&colNm=exchange_rate_realtime", function( d ){} );
+
+
+
+
+
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=list_static&colNm=bank_code_domestic", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=list_static&colNm=bank_swift_kr", function( d ){} );
+
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=list_static&colNm=company_delivery", function( d ){} );
+
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=list_static&colNm=contract_purchase_payment_type", function( d ){} );
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=list_static&colNm=contract_sale_type", function( d ){} );
+
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=list_static&colNm=country", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=list_static&colNm=country__b2ker", function( d ){} );
+
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=list_static&colNm=country_phone_num", function( d ){} );
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=list_static&colNm=country_phone_num__b2ker", function( d ){} );
+
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=list_static&colNm=currency", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=list_static&colNm=currency__b2ker", function( d ){} );
+
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=list_static&colNm=email_detail", function( d ){} );
+
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=list_static&colNm=job_title", function( d ){} );
+
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=list_static&colNm=messenger", function( d ){} );
+
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=list_static&colNm=trade_disposal", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=list_static&colNm=trade_terms", function( d ){} );
+
+
+
+
+
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=parnter&colNm=partner_buyer", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=parnter&colNm=partner_logistics", function( d ){} );
+//window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=parnter&colNm=partner_person", function( d ){} );
+window.b2link_service.common._fn_req( window.b2link.STATIC.CONFIG.URL.PROXY + "http://localhost:49320/_admin/_schema/create_html_select_options__value?dbNm=parnter&colNm=partner_supplier", function( d ){} );

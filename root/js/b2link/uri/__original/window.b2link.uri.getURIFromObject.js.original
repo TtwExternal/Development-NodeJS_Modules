@@ -1,0 +1,27 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2link/uri/window.b2link.uri.getURIFromObject.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * Object를 URI Paramter 형식의 문자열로 바꿔서 Return 한다.
+ * @function
+ * @param {Object} data { a:1, b:2, ... }
+ * @return {String} &a=1&b=2....
+ */
+window.b2link.uri.getURIFromObject = function( data )
+{
+	//window.TtwLog.timeStamp( "---- [ S ] - window.b2link.uri.getURIFromObject():{String}----------" );
+
+	var r = "";
+	for( var s in data ) r += "&" + s + "=" + data[ s ];
+
+	//window.TtwLog.info( r );
+
+	//window.TtwLog.timeStamp( "---- [ E ] - window.b2link.uri.getURIFromObject():{String}----------return r;" );
+	return r;
+};
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

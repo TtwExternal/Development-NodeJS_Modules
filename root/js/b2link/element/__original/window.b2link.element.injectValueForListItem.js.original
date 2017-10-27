@@ -1,0 +1,21 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2link/element/window.b2link.element.injectValueForListItem.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * element에 Data를 "list_item_value" instance명으로 주입한다.
+ * @function
+ * @param {HTMLElement} t HTMLElement
+ * @param {Array|Object|*} data
+ */
+window.b2link.element.injectValueForListItem = function( t, data )
+{
+	//////////window.TtwLog.timeStamp( "---- [ S ] - window.b2link.element.injectValueForListItem():void----------" );
+	t.list_item_value = data;
+	//////////window.TtwLog.timeStamp( "---- [ E ] - window.b2link.element.injectValueForListItem():void----------" );
+};
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

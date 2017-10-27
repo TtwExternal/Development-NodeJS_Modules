@@ -1,0 +1,9 @@
+del /s ui_import\*.html
+del /s ui_import\*.js
+del /s ui_import\*.list
+del /s ui_include\*.html
+del /s ui_include\*.js
+del /s ui_include\*.list
+del /s ui_template\*.html
+del /s ui_template\*.js
+del /s ui_template\*.list

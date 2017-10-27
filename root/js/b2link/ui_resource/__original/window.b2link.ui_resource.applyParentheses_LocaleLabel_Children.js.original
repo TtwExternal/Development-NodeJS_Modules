@@ -1,0 +1,26 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2link/ui_resource/window.b2link.ui_resource.applyParentheses_LocaleLabel_Children.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * ***.local.**.json을 가져온 후 TargetElement.children[ i ].innerHTML의 ((label)) 문자열에 치환 시켜준다.
+ * @function
+ * @param {String} url ./ui/...
+ * @param {HTMLElement} el
+ */
+window.b2link.ui_resource.applyParentheses_LocaleLabel_Children = function( url, el )
+{
+	//window.TtwLog.timeStamp( "---- [ S ] - window.b2link.ui_resource.applyParentheses_LocaleLabel_Children():void----------" );
+
+	if( !el.__originalInnerHTML_Locale ) el.__originalInnerHTML_Locale = el.innerHTML;
+
+	//window.b2link.html.applyParentheses_children( el, window.b2link.ui_resource.reqSync_JSON_HTMLLocaleLabel( url ) );
+	SUtilString.applyParenthesesStrFromObj__NV_NA__El_Children( el, window.b2link.ui_resource.reqSync_JSON_HTMLLocaleLabel( url ) );
+
+	//window.TtwLog.timeStamp( "---- [ E ] - window.b2link.ui_resource.applyParentheses_LocaleLabel_Children():void----------" );
+};
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

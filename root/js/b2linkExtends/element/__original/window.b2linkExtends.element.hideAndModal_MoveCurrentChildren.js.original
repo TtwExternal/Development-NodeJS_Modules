@@ -1,0 +1,42 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2linkExtends/element/window.b2linkExtends.element.hideAndModal_MoveCurrentChildren.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * HTMLElement를 화면에서 숨긴 후 Common Modal을 숨긴다.
+ * @function
+ * @param {Object} d
+ * <code>
+	{
+		"bEffect" : false
+	}
+ * </code>
+ */
+window.b2linkExtends.element.hideAndModal_MoveCurrentChildren = function( d )
+{
+	//////////window.TtwLog.timeStamp( "---- [ S ] - window.b2linkExtends.element.hideAndModal_MoveCurrentChildren():void----------" );
+
+	/*/
+	if( d )
+	{
+		if( d.bEffect ) window.b2linkExtends.element.hideAndModal( this.__el );
+		else window.b2linkExtends.element.hideAndModal_Sync( this.__el );
+	}
+	else window.b2linkExtends.element.hideAndModal_Sync( this.__el );
+	/*/
+	//window.b2linkExtends.element.hideAndModal( this.__el );
+	window.b2linkExtends.element.hideAndModal_Sync( this.__el );
+	//*/
+
+	window.b2link.ui_modal.move_BGContentChildrenToContent();
+
+	//t.style.opacity = 0;
+	//window.getComputedStyle( t ).opacity;
+
+	//////////window.TtwLog.timeStamp( "---- [ E ] - window.b2linkExtends.element.hideAndModal_MoveCurrentChildren():void----------" );
+};
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

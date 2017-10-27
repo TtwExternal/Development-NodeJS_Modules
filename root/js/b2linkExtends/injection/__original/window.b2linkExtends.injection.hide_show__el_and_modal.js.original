@@ -1,0 +1,32 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2linkExtends/injection/window.b2linkExtends.injection.hide_show__el_and_modal.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * @function
+ * @param {HTMLElement} t target
+ */
+window.b2linkExtends.injection.hide_show__el_and_modal = function( t )
+{
+	//////////window.TtwLog.timeStamp( "---- [ S ] - window.b2linkExtends.injection.hide_show__el_and_modal():void----------" );
+
+	window.b2linkExtends.injection.hide_show( t );
+
+	t.hideAndModal = window.b2linkExtends.element.hideAndModal;
+	t.showAndModal = window.b2linkExtends.element.showAndModal;
+
+	t.hideAndModal_Sync = window.b2linkExtends.element.hideAndModal_Sync;
+	t.showAndModal_Sync = window.b2linkExtends.element.showAndModal_Sync;
+
+	t.hideAndModal_MoveBGCLastChild = window.b2linkExtends.element.hideAndModal_MoveBGCLastChild;
+
+	t.hideAndModal_MoveCurrentChildren = window.b2linkExtends.element.hideAndModal_MoveCurrentChildren;
+	t.showAndModal_MoveCurrentChildren = window.b2linkExtends.element.showAndModal_MoveCurrentChildren;
+
+	//////////window.TtwLog.timeStamp( "---- [ E ] - window.b2linkExtends.injection.hide_show__el_and_modal():void----------" );
+};
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

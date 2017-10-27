@@ -1,0 +1,14 @@
+var r = [];
+
+db.getSiblingDB( "<!=nm_db=!>" ).getCollection( "<!=nm_col=!>" )
+	.find({
+		_id : {
+			$gt : NumberInt( <!=id_gt=!> )
+			, $lt : NumberInt( <!=id_lt=!> )
+		}
+	})
+	.forEach( function( doc ){
+		r.push( doc );
+	});
+
+return r;

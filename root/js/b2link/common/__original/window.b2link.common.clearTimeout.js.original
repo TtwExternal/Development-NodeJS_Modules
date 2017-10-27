@@ -1,0 +1,20 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2link/common/window.b2link.common.clearTimeout.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * Timeout을 제거한다.
+ * @function
+ * @param {Number} n
+ */
+window.b2link.common.clearTimeout = function( n )
+{
+	//////////window.TtwLog.timeStamp( "---- [ S ] - window.b2link.common.clearTimeout():void----------" );
+	//////////window.TtwLog.timeStamp( "---- [ E ] - window.b2link.common.clearTimeout():void----------" );
+	clearTimeout( n );
+};
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

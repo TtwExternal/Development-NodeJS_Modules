@@ -1,0 +1,17 @@
+var _map_cols = {
+	counrty__b2ker : "country"
+	, country_phone_num__b2ker : "country_phone_num"
+	, currency__b2ker : "currency"
+};
+
+var d = <!=data=!>;
+var db0 = db.getSiblingDB( "_instance" );
+
+var a_k = d.k.split( "$" );
+var d_colNm = _map_cols[ a_k[ 1 ] ] ? _map_cols[ a_k[ 1 ] ] : a_k[ 1 ];
+var doc = db0.cols.findOne({ _id : d_colNm });
+
+var p = {};
+	p[ a_k[ 0 ] ] = d.v;
+
+return db.getSiblingDB( doc.db ).getCollection( doc._id ).findOne( p );

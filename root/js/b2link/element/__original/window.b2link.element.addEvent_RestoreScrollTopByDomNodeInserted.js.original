@@ -1,0 +1,44 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2link/element/window.b2link.element.addEvent_RestoreScrollTopByDomNodeInserted.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * target HTMLElement를 removeChild할 시에 scrollTop를 기억한다.
+ * target HTMLElement를 appendChild할 시에 기억해놓은 scrollTop를 적용한다.
+ * 사용이 끝난 HTMLElement는 window.b2link.element.removeEvent_RestoreScrollTopByDomNodeInserted로 이벤트를 제거 해준다.
+ * @function
+ * @param {HTMLElement} domNodeElement HTMLElement
+ * @param {HTMLElement} evtElement HTMLElement
+ */
+window.b2link.element.addEvent_RestoreScrollTopByDomNodeInserted = function( domNodeElement, evtElement )
+{
+	//window.TtwLog.timeStamp( "---- [ S ] - window.b2link.element.addEvent_RestoreScrollTopByDomNodeInserted():void----------" );
+
+	domNodeElement.__targetElement__RestoreScrollTopByDomNodeInserted__domNodeElement = domNodeElement;
+	domNodeElement.__targetElement__RestoreScrollTopByDomNodeInserted__evtElement = evtElement;
+	domNodeElement.removeEventListener( "DOMNodeInserted", window.b2link.element.addEvent_RestoreScrollTopByDomNodeInserted._evt_DOMNodeInserted, false );
+	domNodeElement.removeEventListener( "DOMNodeRemoved", window.b2link.element.addEvent_RestoreScrollTopByDomNodeInserted._evt_DOMNodeRemoved, false );
+	domNodeElement.addEventListener( "DOMNodeInserted", window.b2link.element.addEvent_RestoreScrollTopByDomNodeInserted._evt_DOMNodeInserted, false, 0, true );
+	domNodeElement.addEventListener( "DOMNodeRemoved", window.b2link.element.addEvent_RestoreScrollTopByDomNodeInserted._evt_DOMNodeRemoved, false, 0, true );
+
+	//window.TtwLog.timeStamp( "---- [ E ] - window.b2link.element.addEvent_RestoreScrollTopByDomNodeInserted():void----------" );
+};
+window.b2link.element.addEvent_RestoreScrollTopByDomNodeInserted._evt_DOMNodeInserted = function( e ){
+	var _ = e.currentTarget.__targetElement__RestoreScrollTopByDomNodeInserted__evtElement;
+	console.log( _ );
+	console.log( _.__scrollTop );
+	_.scrollTop = _.__scrollTop;
+};
+window.b2link.element.addEvent_RestoreScrollTopByDomNodeInserted._evt_DOMNodeRemoved = function( e ){
+	var _ = e.currentTarget.__targetElement__RestoreScrollTopByDomNodeInserted__evtElement;
+	console.log( _ );
+	console.log( _.scrollTop );
+	if( _.scrollTop ) _.__scrollTop = _.scrollTop;
+	else if( !_.scrollTop && _.__scrollTop ) _.scrollTop = _.__scrollTop;
+};
+
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

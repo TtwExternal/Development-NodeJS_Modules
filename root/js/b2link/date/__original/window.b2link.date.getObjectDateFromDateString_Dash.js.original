@@ -1,0 +1,31 @@
+//----------------------------------------------------------------------------------------------------;
+var fileNm = "js/b2link/date/window.b2link.date.getObjectDateFromDateString_Dash.js";
+if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * @function
+ * @param {String} "2017-01-04"
+ * @return {Object} { y : 2017, m : 2, d : 25, ho : 11, mi : 20, se : 50 }
+ */
+window.b2link.date.getObjectDateFromDateString_Dash = function( dateString )
+{
+	////////window.JamesLog.timeStamp( "---- [ S ] - window.b2link.date.getObjectDateFromDateString_Dash():{Object}----------" );
+
+	if( !dateString ) return null;
+
+	var date_arr = dateString.split( "-" );
+
+	if( date_arr.length < 3 ) return null;
+
+	var r = { y : parseInt( date_arr[ 0 ] ), m : parseInt( date_arr[ 1 ] ), d : parseInt( date_arr[ 2 ] ), ho : 0, mi : 0, se : 0 };
+
+	date_arr = null;
+
+	////////window.JamesLog.timeStamp( "---- [ E ] - window.b2link.date.getObjectDateFromDateString_Dash():{Object}----------" );
+	return r;
+};
+
+//----------------------------------------------------------------------------------------------------;
+if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

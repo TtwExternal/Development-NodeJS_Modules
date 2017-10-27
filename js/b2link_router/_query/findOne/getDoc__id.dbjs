@@ -1,0 +1,3 @@
+var r = db.getSiblingDB( "<!=nm_db=!>" ).getCollection( "<!=nm_col=!>" ).findOne({ _id : "<!=_id=!>" });
+try{ delete r.mpw; }catch(e){}
+return r;

@@ -1,0 +1,27 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2link/ui_resource/window.b2link.ui_resource.applyBrackets_LocaleLabel.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * 사용금지 - 2017.01.05
+ * ***.local.**.json을 가져온 후 TargetElement.children[ i ].innerHTML의 [[label]] 문자열에 치환 시켜준다.
+ * @function
+ * @param {String} url ./ui/...
+ * @param {HTMLElement} el
+ */
+window.b2link.ui_resource.applyBrackets_LocaleLabel = function( url, el )
+{
+	//window.TtwLog.timeStamp( "---- [ S ] - window.b2link.ui_resource.applyBrackets_LocaleLabel():void----------" );
+	window.TtwLog.warn( "사용금지 - 2017.01.05" );
+
+	if( !el.__originalInnerHTML_Locale ) el.__originalInnerHTML_Locale = el.innerHTML;
+
+	window.b2link.html.applyBrackets( el, window.b2link.ui_resource.reqSync_JSON_HTMLLocaleLabel( url ) );
+
+	//window.TtwLog.timeStamp( "---- [ E ] - window.b2link.ui_resource.applyBrackets_LocaleLabel():void----------" );
+};
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

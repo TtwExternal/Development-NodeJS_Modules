@@ -1,0 +1,56 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2link/element/window.b2link.element.getValueOfElement.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+(function(){
+
+	var _ = {};
+
+	//----------;
+	var _f0 = function( t ){ return t.value; };
+	var a = [
+		//HTMLElement.type;
+		"button", "color", "date", "datetime-local", "datetime", "email", "file", "hidden", "image", "month", "number", "password", "range", "reset", "search", "submit", "tel", "text", "time", "url", "week"
+		//HTMLElement.tagName;
+		, "TEXTAREA", "SELECT", "DATALIST", "OUTPUT", "KEYGEN"
+	];
+	var i=0, iLen=a.length;
+	for( ; i<iLen; ++i ) _[ "__" + a[ i ] ] = _f0;
+	//----------;
+
+
+	//----------;
+	_.__checkbox = function( t ){ return t.checked; };
+	_.__radio = function( t ){
+		if( t.length > 0 )
+		{
+			var i=0, iLen=t.length;
+			for( ; i<iLen; ++i ) if( t[ i ].checked ) return t[ i ].value;
+		}
+		else return t.value;
+	};
+	//----------;
+
+	/**
+	 * targetElement의 value를 반환한다.
+	 * @function
+	 * @param {HTMLElement|Array} t HTMLElement 또는 radio Array
+	 * @return {String|Number}
+	 */
+	window.b2link.element.getValueOfElement = function( t )
+	{
+		window.TtwLog.timeStamp( "---- [ S ] - window.b2link.element.getValueOfElement():{String|Number}----------" );
+
+		var key = ( "array" == typeof t )
+			? ( ( t[ 0 ].tagName == "INPUT" ) ? t[ 0 ].type.toLowerCase() : t[ 0 ].tagName )//<input type="radio">;
+			: ( ( t.tagName == "INPUT" ) ? t.type.toLowerCase() : t.tagName );//<input>;
+
+		window.TtwLog.timeStamp( "---- [ E ] - window.b2link.element.getValueOfElement():{String|Number}----------" );
+		return window.b2link.element.getValueOfElement[ key ]( t );
+	};
+})();
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

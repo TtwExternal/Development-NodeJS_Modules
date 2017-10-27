@@ -1,0 +1,324 @@
+//----------------------------------------------------------------------------------------------------;
+var fileNm = "./js/b2linkUIClass/window.b2linkUIClass.Interface_100.js";
+if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * 공통 인터페이스 예제 클래스
+ * @function
+ * @param {String} url
+ * @param {HTMLElement} $el
+ */
+window.b2linkUIClass.Interface_100 = function( url, $el )
+{
+	//window.b2link.ui_resource.apply_LocaleLabel( url, $el );
+	//window.b2link.ui_resource.applyParentheses_LocaleLabel( url, $el );
+	window.b2link.ui_resource.applyParentheses_LocaleLabel_Children( url, $el );
+
+	//----------------------------------------------------------------------------------------------------;
+
+	//	STATIC;
+
+	//----------------------------------------------------------------------------------------------------;
+
+	//--------------------------------------------------;
+
+	//--------------------------------------------------;
+
+	//--------------------------------------------------;
+
+	//--------------------------------------------------;
+
+
+	//--------------------------------------------------;
+
+	var _this = { __url : url };
+
+	var $w = window;
+	var $d = $w.document;
+
+	/**
+	 * targetElement의 ChildNodes중 입력한 className과 같은 자식 객체를 검색하여 0번째 객체를 반환한다.
+	 * @function
+	 * @param {HTMLElement} t HTMLElement
+	 * @param {String} className
+	 */
+	var $f0 = window.b2link.element.getElementByClassName;
+
+	//--------------------------------------------------;
+
+	//--------------------------------------------------;
+
+	//--------------------------------------------------;
+
+	//----------------------------------------------------------------------------------------------------;
+
+	//	EVENT;
+
+	//----------------------------------------------------------------------------------------------------;
+
+	/**
+	 * 이 js객체의 target Element($el)에 이벤트 리스너를 등록한다.
+	 * @function
+	 */
+	var _addEvent = function()
+	{
+		_removeEvent();
+		//$w.addEventListener( "resize", _evt_resize$parentElement, false, 0, true );
+	};
+
+	/**
+	 * 이 js객체의 target Element($el)의 이벤트 리스너를 제거한다.
+	 * @function
+	 */
+	var _removeEvent = function()
+	{
+		//$w.removeEventListener( "resize", _evt_resize$parentElement, false );
+	};
+
+	/**
+	 * 이 js객체의 target Element($el)의 이벤트 리스너를 제거한다.
+	 * @function
+	 * @param {ResizeEvent} e event
+	 */
+	/*/
+	var _evt_resize$parentElement = function( e )
+	{
+		window.TtwLog.timeStamp( "-- [ S ] - _evt_resize$parentElement():void----------" );
+
+		_setPosition();
+
+		window.TtwLog.timeStamp( "-- [ E ] - _evt_resize$parentElement():void----------" );
+	};
+	//*/
+
+	//----------------------------------------------------------------------------------------------------;
+
+	//	FUNCTION;
+
+	//----------------------------------------------------------------------------------------------------;
+
+	//--------------------------------------------------;
+
+	//--------------------------------------------------;
+
+	/**
+	 * 이 객체와 $el를 파괴 시켜준다.
+	 * @function
+	 */
+	var _dispose = function()
+	{
+		//각종 이벤트 리스너를 제거해준다.
+		_removeEvent();
+
+		//js 상의 인스턴스를 제거 해준다.
+		$w = null;
+		$d = null;
+
+		$f0 = null;
+
+		$el.remove();
+
+		//혹 자식 객체 존재시 자식 객체 dispose()를 호출하여 자식 객체도 개별 제거 해준다.
+	};
+
+	//--------------------------------------------------;
+
+	/**
+	 * $el에서 필요한 데이터를 요청한다.
+	 * @function
+	 */
+	var _req_Data = function()
+	{
+		window.TtwLog.timeStamp( "-- [ S ] - _req_Data():void----------" );
+		//데이터 요청에 필요한 데이터를 가져오는 함수를 호출한다.;
+		//_getData__Req();
+		window.TtwLog.timeStamp( "-- [ E ] - _req_Data():void----------" );
+	};
+
+	//--------------------------------------------------;
+
+	/**
+	 * $el에서 필요한 데이터를 받은 후 데이터를 사용하는 함수를 호출한다.
+	 * @function
+	 * @param {*} result
+	 */
+	var _res_Data = function( result )
+	{
+		window.TtwLog.timeStamp( "-- [ S ] - _res_Data():void----------" );
+
+		//받은 데이터를 검증하는 함수 호출;
+		//_validation_Data__Res( ?? );
+
+		//받은 데이터를 활용하여 사용하는 함수 호출;
+		//_setData__Res( ?? );
+
+		window.TtwLog.timeStamp( "-- [ E ] - _res_Data():void----------" );
+	};
+
+	//--------------------------------------------------;
+
+	/**
+	 * $el에서 필요한 데이터를 요청하기 위한 데이터를 검증한다.
+	 * @function
+	 * @param {*} d data
+	 * @return {*}
+	 */
+	var _validation_Data__Req = function( d )
+	{
+		window.TtwLog.timeStamp( "-- [ S ] - _validation_Data__Req():{*}----------" );
+		window.TtwLog.timeStamp( "-- [ E ] - _validation_Data__Req():{*}----------" );
+	};
+
+	/**
+	 * $el에서 필요한 데이터를 받은 후 데이터를 검증한다.
+	 * @function
+	 * @param {*} d data
+	 * @return {*}
+	 */
+	var _validation_Data__Res = function( d )
+	{
+		window.TtwLog.timeStamp( "-- [ S ] - _validation_Data__Res():{*}----------" );
+		window.TtwLog.timeStamp( "-- [ E ] - _validation_Data__Res():{*}----------" );
+	};
+
+	//--------------------------------------------------;
+
+	//----------------------------------------------------------------------------------------------------;
+
+	//	GETTER / SETTER;
+
+	//----------------------------------------------------------------------------------------------------;
+
+	//--------------------------------------------------;
+
+	/**
+	 * req_Data를 하기위해 필요한 데이터를 가져온다.
+	 * @function
+	 * @return {*}
+	 */
+	var _getData__Req = function()
+	{
+		window.TtwLog.timeStamp( "-- [ S ] - _getData__Req():{*}----------" );
+		//각종 Element또는 js 상의 status 객체등의 데이터 요청을 위한 데이터를 가져온다.
+		//...
+		//데이터 요청을 위한 데이터의 검증;
+		//_validation_Data__Req();
+
+		//return ??;
+		window.TtwLog.timeStamp( "-- [ S ] - _getData__Req():{*}----------" );
+	};
+
+	//--------------------------------------------------;
+
+	/**
+	 * 이 객체에 필요한 데이터를 external 소스에서 설정한다.
+	 * @function
+	 * @param {Object} d
+	 * <code>
+	 * </code>
+	 */
+	var _setData = function( d )
+	{
+		window.TtwLog.timeStamp( "-- [ S ] - _setData():void----------" );
+		window.TtwLog.timeStamp( "-- [ E ] - _setData():void----------" );
+	};
+
+	//------------------------------;
+
+	/**
+	 * 이 객체에 필요한 데이터를 external 소스에서 설정한다.
+	 * @function
+	 * @param {Object} d
+	 * <code>
+	 * </code>
+	 */
+	var _setData__Res = function( d )
+	{
+		window.TtwLog.timeStamp( "-- [ S ] - _setData__Res():void----------" );
+		window.TtwLog.timeStamp( "-- [ E ] - _setData__Res():void----------" );
+	};
+
+	//------------------------------;
+
+	/**
+	 * $el의 x, y를 설정하는 로직을  작성한다.
+	 * @function
+	 */
+	var _setPosition = function()
+	{
+		window.TtwLog.timeStamp( "-- [ S ] - _setPosition():void----------" );
+
+		//var t = $el;
+		//window.b2link.element.setPosition_CenterMiddle_FromParent( t );
+
+		window.TtwLog.timeStamp( "-- [ E ] - _setPosition():void----------" );
+	};
+
+	/**
+	 * 필요시에 $el의 width, height를 설정하는 로직을  작성한다.
+	 * @function
+	 */
+	/*/
+	var _setSize = function()
+	{
+		window.TtwLog.timeStamp( "-- [ S ] - _setSize():void----------" );
+
+		//var t = $el;
+
+		window.TtwLog.timeStamp( "-- [ E ] - _setSize():void----------" );
+	};
+	//*/
+
+	//--------------------------------------------------;
+
+	//--------------------------------------------------;
+
+	//--------------------------------------------------;
+
+	//--------------------------------------------------;
+
+	//--------------------------------------------------;
+
+	//----------------------------------------------------------------------------------------------------;
+
+	//	LOGIC;
+
+	//----------------------------------------------------------------------------------------------------;
+
+	//----------;
+	_addEvent();
+	//_setPosition();
+	//----------;
+
+	//_req_Data();
+
+	//----------;
+
+	//--------------------------------------------------this;
+	//주석이 아닌 API는 기본적으로 무조건 노출 시킬 API;
+	//주석은 활용 여부에 따라 노출 자유;
+	var _ = _this;
+
+		_.__el = $el;
+	
+		//_.addEvent = _addEvent;
+		//_.removeEvent = _removeEvent;
+	
+		_.dispose = _dispose;
+	
+		_.req_Data = _req_Data;
+	
+		_.getData__Req = _getData__Req;
+	
+		_.setData = _setData;
+		//_.setPosition = _setPosition;
+		//_.setSize = _setSize;
+	//--------------------------------------------------this;
+
+	return _;
+};
+
+//----------------------------------------------------------------------------------------------------;
+if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

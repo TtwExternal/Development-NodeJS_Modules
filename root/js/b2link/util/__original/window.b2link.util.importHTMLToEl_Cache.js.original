@@ -1,0 +1,19 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2link/util/window.b2link.util.importHTMLToEl_Cache.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * *.html을 불러와서 targetElement에 appendChild 한다.
+ * htmlURL로 불러온 html 문자열을 메모리상에 Cache를 시킨다.
+ * 같은 URL을 요청할 시에 다시 Network 통신을 발생시키지 않고 내부에 보관된 문자열로 처리해준다.
+ * @function
+ * @param {String} htmlURL HTML File URL
+ * @param {HTMLElement} targetElement
+ * @return {*}
+ */
+window.b2link.util.importHTMLToEl_Cache = SUtilTemplateHTML.addHTML__URLToEl_Cache;
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

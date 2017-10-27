@@ -1,0 +1,28 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2linkExtends/element/window.b2linkExtends.element.hideAndModal.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * HTMLElement를 화면에서 숨긴 후 Common Modal을 숨긴다.
+ * @function
+ */
+window.b2linkExtends.element.hideAndModal = function( el )
+{
+	//////////window.TtwLog.timeStamp( "---- [ S ] - window.b2linkExtends.element.hideAndModal():void----------" );
+	var t = el ? el : this.__el;
+	window.b2link.ui_modal.hide_transition();
+	window.b2link.element.hide( t );
+	window.b2link.event.dispatchCE__HIDED_EL( t, { _ : this } );
+
+	window.b2link.ui_modal.removeChild( t );
+
+	//t.style.opacity = 0;
+	//window.getComputedStyle( t ).opacity;
+
+	//////////window.TtwLog.timeStamp( "---- [ E ] - window.b2linkExtends.element.hideAndModal():void----------" );
+};
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

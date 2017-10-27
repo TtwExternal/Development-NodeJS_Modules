@@ -1,0 +1,91 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2linkExtends/element/window.b2linkExtends.element.show.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * HTMLElement.style.display = "";
+ * parentElement를 지정하면 appendChild를 한다.
+ * @function
+ * @param {HTMLElement} p parentElement
+ * @return {HTMLElement}
+ * @example
+ * <code>
+	//----------Modal 객체 전환;
+	var modal0 = window.b2link_ui.selector.list.category.category_partner_buyer();
+	var modal0Ctrl = modal0[ 1 ];
+
+	var modal1 = window.b2link_ui.selector.partner.partner_person();
+	var modal1Ctrl = modal1[ 1 ];
+
+	var modal0 = window.b2link_ui.selector.list.category.category_partner_buyer();
+
+		modal0Ctrl.addEvent_mClick( function( li ){
+		console.log( "메롱" );
+		console.log( li );
+		console.log( li.list_item_value );
+
+		modal1Ctrl.showAndModal();
+	});
+
+	//----------다중 Modal 객체;
+	var o0 =  window.b2link_ui.selector.table.list_static.country();
+	var o1 = window.b2link_ui.selector.list.list_static.country();
+	var o0c = o0[ 1 ];
+	var o1c = o1[ 1 ];
+	o0c.showAndModal( false );
+	o1c.showAndModal( false );
+
+	o0c.showAndModal_MoveCurrentChildren();
+	o1c.showAndModal_MoveCurrentChildren();
+ * </code>
+ */
+window.b2linkExtends.element.show = function( p )
+{
+	//////////window.TtwLog.timeStamp( "---- [ S ] - window.b2linkExtends.element.show():{HTMLElement}----------" );
+	var t = this.__el;
+
+	if( !this.__el.parentElement )
+	{
+		if( !p )
+		{
+			if( window.b2link.ui.APPEND_CHILD_TARGET_ELEMENT ) p = window.b2link.ui.APPEND_CHILD_TARGET_ELEMENT;
+			else p = window.b2link.STATIC.CONST.ROOT_DIV.EL_UI_COMPONENT_FIXED;
+		}
+	}
+	window.b2link.element.show( this.__el, p );
+
+
+	/*/
+	var s = t.style;
+		s.position = "absolute";
+
+	if( t.__FULL_SIZE_MODE )
+	{
+		var le = 10;//left;
+		var ri = 15;//right;
+		var to = 1;//top;
+		var bo = 1;//bottom;
+
+		s.left = le + "px";
+		s.right = ri + "px";
+
+		s.top = to + "px";
+		//s.bottom = bo + "px";
+
+		var minMaxWidth = window.b2link.ui.APPEND_CHILD_TARGET_ELEMENT.clientWidth - le - ri + "px";
+		s.minWidth = s.maxWidth = minMaxWidth;
+
+		window.b2link.event.dispatchCE__RESIZED_EL( t, null );
+	}
+	//*/
+
+
+	window.b2link.event.dispatchCE__SHOWED_EL( this.__el, { _ : this } );
+	//////////window.TtwLog.timeStamp( "---- [ E ] - window.b2linkExtends.element.show():{HTMLElement}----------" );
+	return this.__el;
+};
+
+//----------------------------------------------------------------------------------------------------;
+if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

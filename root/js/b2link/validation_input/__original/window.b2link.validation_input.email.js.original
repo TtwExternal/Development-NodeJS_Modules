@@ -1,0 +1,36 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2link/validation_input/window.b2link.validation_input.email.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+(function(){
+
+	var _regExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+	/**
+	 * @function
+	 * @param {String} e_id email_id
+	 * @param {String} e_domain email_domain
+	 * @return {Object} { r : {Boolean}, m : {String} } r - result, m - message
+	 */
+	window.b2link.validation_input.email = function( e_id, e_domain )
+	{
+		//window.TtwLog.timeStamp( "---- [ S ] - window.b2link.validation_input.email():{Object}----------" );
+
+		var r = { r : 1, m : "" };
+
+		if( -1 == e_domain.indexOf( "." ) ){ r.r = 0; r.m = "이메일 도메인 구문 오류"; return r; }
+
+		if( !e_id || !e_domain ){ r.r = 0; r.m = "이메일 입력 오류"; return r; }
+
+		var email = e_id + "@" + e_domain;
+		if( !email.match( _regExp ) ){ r.r = 0; r.m = "이메일 구문 오류"; return r; }
+
+		//window.TtwLog.timeStamp( "---- [ E ] - window.b2link.validation_input.email():{Object}----------return r;" );
+		return r;
+	};
+})();
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

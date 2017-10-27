@@ -1,0 +1,88 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2link/element/window.b2link.element.getFormElements.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+(function(){
+	/**
+	 * targetElement의 모든 form elements들을 반환한다.
+	 * @function
+	 * @param {Object} t
+	 * @param {HTMLElement} el HTMLElement
+	 * @return {Object}
+	 */
+	window.b2link.element.getFormElements = function( t, el )
+	{
+		window.AlexLog.timeStamp( "---- [ S ] - window.b2link.element.getFormElements():{Object}----------" );
+
+		var t0 = window.b2link.element.getFormElements;
+		var f0 = t0._f0;
+		var f1 = t0._f1;
+
+		t = t ? t : {};
+		var a = t0._a0;
+
+		var io;
+		var i=0, iLen=a.length;
+		for( ; i<iLen; ++i )
+		{
+			io = a[ i ];
+
+			f0( t, el.getElementsByTagName( io ) );
+		};
+
+		f1( t, el );
+
+		window.AlexLog.timeStamp( "---- [ E ] - window.b2link.element.getFormElements():{Object}----------" );
+
+		return t;
+	};
+
+	var _ = window.b2link.element.getFormElements;
+		_._a0 = [ "SELECT", "TEXTAREA", "BUTTON", "DATALIST", "KEYGEN", "OUTPUT" ];
+		_._f0 = function( t, a )
+		{
+			var io;
+			var i=0, iLen=a.length;
+			for( ; i<iLen; ++i )
+			{
+				io = a [ i ];
+				t[ io.classList[ 0 ] ] = io;
+			}
+		};
+
+		_._f1 = function( t, el )
+		{
+			var a = el.getElementsByTagName( "INPUT" );
+
+			var io;
+			var i=0, iLen=a.length;
+			for( ; i<iLen; ++i )
+			{
+				io = a [ i ];
+				if( io.type == "radio" )
+				{
+					if( !t[ io.classList[ 0 ] ] )
+					{
+						t[ io.classList[ 0 ] ] = [];
+						t[ io.classList[ 0 ] ].value = null;
+					}
+
+					t[ io.classList[ 0 ] ].push( io );
+
+					if( io.checked )
+					{
+						t[ io.classList[ 0 ] ].value = io.value;
+					}
+				}
+				else
+				{
+					t[ io.classList[ 0 ] ] = io;
+				}
+			}
+		};
+})();
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

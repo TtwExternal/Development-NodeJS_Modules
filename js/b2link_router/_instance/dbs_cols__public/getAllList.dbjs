@@ -1,0 +1,5 @@
+var r = {};
+
+db.getSiblingDB( "_instance" ).dbs_cols__public.find({}).forEach(function( doc ){ r[ doc._id ] = doc; });
+
+return r;

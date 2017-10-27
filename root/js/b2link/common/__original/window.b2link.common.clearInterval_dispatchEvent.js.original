@@ -1,0 +1,23 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2link/common/window.b2link.common.clearInterval_dispatchEvent.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * Interval을 제거한다.
+ * 대상 HTMLElement에서 window.b2link.event.INTERVAL_END Event를 Dispatch 한다.
+ * @function
+ * @param {Number} n
+ * @param {HTMLElement} t
+ */
+window.b2link.common.clearInterval_dispatchEvent = function( n, t )
+{
+	//////////window.TtwLog.timeStamp( "---- [ S ] - window.b2link.common.clearInterval_dispatchEvent():void----------" );
+	//////////window.TtwLog.timeStamp( "---- [ E ] - window.b2link.common.clearInterval_dispatchEvent():void----------" );
+	clearTimeout( n );
+	if( t ) window.b2link.event.dispatchCustomEvent( t, window.b2link.event.INTERVAL_END, n );
+};
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

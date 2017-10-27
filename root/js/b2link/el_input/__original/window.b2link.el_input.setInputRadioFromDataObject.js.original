@@ -1,0 +1,61 @@
+//----------------------------------------------------------------------------------------------------;
+var fileNm = "js/b2link/el_input/window.b2link.el_input.setInputRadioFromDataObject.js";
+if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * @function
+ * @param {HTMLElement} t el_div
+ * @param {Array} d data Object Array
+ * @param {String} className
+ * @param {String} valueName data Object 안에서 라디오 버튼의 value로 사용할 Property name
+ * @param {String} textName data Object 안에서 라디오 버튼에 대한 text로 사용할 Property name
+ */
+window.b2link.el_input.setInputRadioFromDataObject = function( t, d, className, valueName, textName )
+{
+	window.Rh2Log.timeStamp( "---- [ S ] - window.b2link.el_input.setInputRadioFromDataObject():void----------" );
+
+	var f = window.b2link.element.getElementByClassName;
+
+	var o = f( t, className );
+	if( o )
+	{
+		var p = o.parentElement;
+			p.innerHTML = "";
+
+		var tempObj = null;
+		var tempStr = null;
+
+		var i=0, iLen=d.length;
+		for( ; i<iLen; ++i )
+		{
+			tempObj = document.createElement( "input" );
+			tempObj.type = o.type;
+			tempObj.className = o.className;
+			tempObj.name = o.name;
+			tempObj.value = d[ i ][ valueName ];
+			tempObj.title = d[ i ][ textName ];
+
+			if( o.required ) tempObj.required = o.required;
+
+			tempObj.item_value = d[ i ];
+
+			tempStr = document.createElement( "span" );
+			tempStr.innerText = d[ i ][ textName ];
+
+			p.appendChild( tempObj );
+			p.appendChild( tempStr );
+		}
+	}
+	else
+	{
+		window.Rh2Log.error( "---- [ E ] - window.b2link.el_input.setInputRadioFromDataObject() ----------" );
+		window.Rh2Log.error( "className : " + className + "인 element 존재하지 않음" );
+	}
+
+	window.Rh2Log.timeStamp( "---- [ E ] - window.b2link.el_input.setInputRadioFromDataObject():void----------" );
+};
+
+//----------------------------------------------------------------------------------------------------;
+if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

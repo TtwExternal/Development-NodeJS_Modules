@@ -1,0 +1,89 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2link/element/window.b2link.element.getValueOfElement.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+(function(){
+	/**
+	 * targetElement의 value를 반환한다.
+	 * @function
+	 * @param {HTMLElement} t HTMLElement
+	 * @return {Object} {}
+	 */
+	window.b2link.element.getValueOfElement = function( t )
+	{
+		//window.AlexLog.timeStamp( "---- [ S ] - window.b2link.element.getValueOfElement():{Array}----------" );
+
+		var key = null;
+		try
+		{
+			key = ( t.tagName == "INPUT" ) ? "_fn_" + t.type : "_fn_" + t.tagName.toLowerCase();
+		}
+		catch( e )
+		{
+			key = ( t[ 0 ].tagName == "INPUT" ) ? "_fn_" + t[ 0 ].type : "_fn_" + t[ 0 ].tagName.toLowerCase();
+		}
+		var r = window.b2link.element.getValueOfElement[ key ]( t );
+
+		//window.AlexLog.timeStamp( "---- [ S ] - window.b2link.element.getValueOfElement():{Array}----------" );
+
+		return r;
+	};
+
+	var _ = window.b2link.element.getValueOfElement;
+		_[ "_fn_button"   ] = function( t ){ return t.value; };
+		_[ "_fn_color"    ] = function( t ){ return t.value; };
+		_[ "_fn_email"    ] = function( t ){ return t.value; };
+		_[ "_fn_file"     ] = function( t ){ return t.value; };
+		_[ "_fn_hidden"   ] = function( t ){ return t.value; };
+		_[ "_fn_image"    ] = function( t ){ return t.value; };
+		_[ "_fn_month"    ] = function( t ){ return t.value; };
+		_[ "_fn_number"   ] = function( t ){ return t.value; };
+		_[ "_fn_password" ] = function( t ){ return t.value; };
+		_[ "_fn_range"    ] = function( t ){ return t.value; };
+		_[ "_fn_reset"    ] = function( t ){ return t.value; };
+		_[ "_fn_search"   ] = function( t ){ return t.value; };
+		_[ "_fn_submit"   ] = function( t ){ return t.value; };
+		_[ "_fn_tel"      ] = function( t ){ return t.value; };
+		_[ "_fn_text"     ] = function( t ){ return t.value; };
+		_[ "_fn_time"     ] = function( t ){ return t.value; };
+		_[ "_fn_url"      ] = function( t ){ return t.value; };
+		_[ "_fn_week"     ] = function( t ){ return t.value; };
+		_[ "_fn_date"     ] = function( t ){ return t.value; };
+		_[ "_fn_datetime" ] = function( t ){ return t.value; };
+		_[ "_fn_datetime-local" ] = function( t ){ return t.value; };
+
+		_[ "_fn_checkbox" ] = function( t ){ return t.checked; };
+
+		_[ "_fn_radio" ] = function( t ){
+			if( t.length > 0 )
+			{
+				var i=0, iLen=t.length;
+				var v = null;
+				for( ; i<iLen; ++i )
+				{
+					if( t[ i ].checked )
+					{
+						v = t[ i ].value;
+						break;
+					}
+				}
+			}
+			else
+			{
+				v = t.value;
+			}
+			return v;
+		};
+
+		_[ "_fn_textarea" ] = function( t ){ return t.value; };
+		_[ "_fn_select"   ] = function( t ){ return t.value; };
+		_[ "_fn_button"   ] = function( t ){ return t.value; };
+		_[ "_fn_datalist" ] = function( t ){ return t.value; };
+		_[ "_fn_output"   ] = function( t ){ return t.value; };
+		_[ "_fn_keygen"   ] = function( t ){ return t.value; };
+})();
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

@@ -1,0 +1,28 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2link/element/window.b2link.element.removeEvent_RestoreScrollTopByDomNodeInserted.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * window.b2link.element.addEvent_RestoreScrollTopByDomNodeInserted로 추가한 이벤트를 제거한다.
+ * @param {HTMLElement} domNodeElement
+ */
+window.b2link.element.removeEvent_RestoreScrollTopByDomNodeInserted = function( domNodeElement )
+{
+	//window.TtwLog.timeStamp( "---- [ S ] - window.b2link.element.removeEvent_RestoreScrollTopByDomNodeInserted():void----------" );
+
+	var _;
+
+	if( domNodeElement ) _ = domNodeElement;
+	else _ = domNodeElement.__targetElement__RestoreScrollTopByDomNodeInserted__domNodeElement;
+	if( !_ ) window.b2link_ui.error.message( "window.b2link.element.removeEvent_RestoreScrollTopByDomNodeInserted Error : 이벤트를 제거할 대상 객체가 존재하지 않음" );
+
+	_.removeEventListener( "DOMNodeInserted", window.b2link.element.addEvent_RestoreScrollTopByDomNodeInserted._evt_DOMNodeInserted, false );
+	_.removeEventListener( "DOMNodeRemoved", window.b2link.element.addEvent_RestoreScrollTopByDomNodeInserted._evt_DOMNodeRemoved, false );
+
+	//window.TtwLog.timeStamp( "---- [ E ] - window.b2link.element.removeEvent_RestoreScrollTopByDomNodeInserted():void----------" );
+};
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

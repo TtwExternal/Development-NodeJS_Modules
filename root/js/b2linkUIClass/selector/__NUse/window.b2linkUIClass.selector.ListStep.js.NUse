@@ -1,0 +1,297 @@
+//----------------------------------------------------------------------------------------------------;
+var fileNm = "./js/b2linkUIClass/selector/window.b2linkUIClass.selector.ListStep.js";
+if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * 개발예정 - 2017.01.05
+ * ./ui_import/ 에서 사용한다.
+ *
+ * @function
+ * @param {String} url 최하위 JS 파일, 이 함수를 호출한 가장 마지막 함수가 존재하는 JS 파일 URL, HTML과 셋트인 파일의 URL이다.
+ * @param {HTMLUListElement} $el_ul 이 API에서 생성되는 Controller(_this) 객체의 Target HTMLUListElement.
+ */
+window.b2linkUIClass.selector.ListStep = function( url, $el_ul )
+{
+	//window.b2link.ui_resource.applyParentheses_LocaleLabel( url, $el_ul );//***.local.**.json을 가져온 후 TargetElement.innerHTML의 ((label)) 문자열에 치환 시켜준다.;
+	//window.b2link.ui_resource.applyParentheses_LocaleLabel_Children( url, $el_ul );//***.local.**.json을 가져온 후 TargetElement.children[ i ].innerHTML의 ((label)) 문자열에 치환 시켜준다.;
+
+	//----------------------------------------------------------------------------------------------------;
+
+	//	STATIC;
+
+	//----------------------------------------------------------------------------------------------------;
+
+	//--------------------------------------------------;
+
+	//--------------------------------------------------;
+
+	//--------------------------------------------------;
+
+	//--------------------------------------------------;
+
+
+	//--------------------------------------------------;
+
+	var _this = { __url : url };
+
+	var $w = window;
+	var $d = $w.document;
+
+	/**
+	 * targetElement의 ChildNodes중 입력한 className과 같은 자식 객체를 검색하여 0번째 객체를 반환한다.
+	 * @function
+	 * @param {HTMLElement} t HTMLElement
+	 * @param {String} className
+	 */
+	var $f0 = window.b2link.element.getElementByClassName;
+
+	var __rootElement = null;
+	var __rootElementCtrl = null;
+
+	var _fn_req_Data = null;
+
+	//--------------------------------------------------;
+
+	//--------------------------------------------------;
+
+	//--------------------------------------------------;
+
+	//----------------------------------------------------------------------------------------------------;
+
+	//	EVENT;
+
+	//----------------------------------------------------------------------------------------------------;
+
+	/**
+	 * @function
+	 */
+	var _addEvent = function()
+	{
+		_removeEvent();
+		//$w.addEventListener( "resize", _evt_resize$parentElement, false, 0, true );
+	};
+
+	/**
+	 * @function
+	 */
+	var _removeEvent = function()
+	{
+		//$w.removeEventListener( "resize", _evt_resize$parentElement, false );
+	};
+
+	/**
+	 * @function
+	 * @param {ResizeEvent} e event
+	 */
+	/*/
+	var _evt_resize$parentElement = function( e )
+	{
+		window.TtwLog.timeStamp( "----- [ S ] - _evt_resize$parentElement():void----------" );
+
+		_setPosition();
+
+		window.TtwLog.timeStamp( "----- [ E ] - _evt_resize$parentElement():void----------" );
+	};
+	//*/
+
+	//----------------------------------------------------------------------------------------------------;
+
+	//	FUNCTION;
+
+	//----------------------------------------------------------------------------------------------------;
+
+	//--------------------------------------------------;
+
+	//--------------------------------------------------;
+
+	/**
+	 * @function
+	 */
+	var _dispose = function()
+	{
+		_removeEvent();
+		$w = null;
+		$d = null;
+
+		$f0 = null;
+
+		_fn_req_Data = null;
+	};
+
+	//--------------------------------------------------;
+
+	/**
+	 * @function
+	 */
+	var _req_Data = function()
+	{
+		window.TtwLog.timeStamp( "----- [ S ] - _req_Data():void----------" );
+
+		_fn_req_Data( _res_Data );
+
+		window.TtwLog.timeStamp( "----- [ E ] - _req_Data():void----------" );
+	};
+
+	//--------------------------------------------------;
+
+	/**
+	 * @function
+	 * @param {Array}
+	 */
+	var _res_Data = function( result )
+	{
+		window.TtwLog.timeStamp( "----- [ S ] - _res_Data():void----------" );
+
+		_setData__li( result );
+
+		window.TtwLog.timeStamp( "----- [ E ] - _res_Data():void----------" );
+	};
+
+	//--------------------------------------------------;
+
+	//----------------------------------------------------------------------------------------------------;
+
+	//	GETTER / SETTER;
+
+	//----------------------------------------------------------------------------------------------------;
+
+	//--------------------------------------------------;
+
+	//--------------------------------------------------;
+
+	/**
+	 * @function
+	 * @param {Object} d
+	 * <code>
+	 * {
+	 *	"fn" : {
+	 *		"req_Data" : function( cbComplete ){}
+	 *	}
+	 * }
+	 * </code>
+	 */
+	var _setData = function( d )
+	{
+		window.TtwLog.timeStamp( "----- [ S ] - _setData():void----------" );
+
+		_fn_req_Data = d.fn.req_Data;
+
+		window.TtwLog.timeStamp( "----- [ E ] - _setData():void----------" );
+	};
+
+	//------------------------------;
+
+	/**
+	 * @function
+	 * @param {Array} data
+	 */
+	var _setData__li = function( data )
+	{
+		window.TtwLog.timeStamp( "----- [ S ] - _setData__li():void----------" );
+
+		console.log( data );
+
+		window.b2link.html_ul.apply_child( $el_ul, data );
+
+		window.TtwLog.timeStamp( "----- [ E ] - _setData__li():void----------" );
+	};
+
+	//------------------------------;
+
+	/**
+	 * @function
+	 */
+	/*/
+	var _setPosition = function()
+	{
+		window.TtwLog.timeStamp( "----- [ S ] - _setPosition():void----------" );
+
+		//var t = $el_ul;
+		//window.b2link.element.setPosition_CenterMiddle_FromParent( t );
+
+		window.TtwLog.timeStamp( "----- [ E ] - _setPosition():void----------" );
+	};
+	//*/
+
+	/**
+	 * @function
+	 * @param {HTMLElement} rootElement
+	 * @param {HTMLElement} rootElementCtrl
+	 */
+	var _setRootElementAndCtrl = function( rootElement, rootElementCtrl ){ _setRootElement( rootElement ); _setRootElementCtrl( rootElementCtrl ); };
+
+	//--------------------------------------------------;
+
+	/**
+	 * @function
+	 * @return {HTMLElement}
+	 */
+	var _getRootElement = function(){ return __rootElement; };
+	/**
+	 * @function
+	 * @param {HTMLElement} rootElement
+	 * @param {HTMLElement} rootElementCtrl
+	 */
+	var _setRootElement = function( rootElement ){ __rootElement = rootElement; };
+
+	/**
+	 * @function
+	 * @return {Object}
+	 */
+	var _getRootElementCtrl = function(){ return __rootElementCtrl; };
+	/**
+	 * @function
+	 * @param {Object} rootElementCtrl
+	 */
+	var _setRootElementCtrl = function( rootElementCtrl ){ __rootElementCtrl = rootElementCtrl; };
+
+	//--------------------------------------------------;
+
+	//--------------------------------------------------;
+
+	//--------------------------------------------------;
+
+	//--------------------------------------------------;
+
+	//--------------------------------------------------;
+
+	//----------------------------------------------------------------------------------------------------;
+
+	//	LOGIC;
+
+	//----------------------------------------------------------------------------------------------------;
+
+	//----------;
+	_addEvent();
+	//_setPosition();
+	//----------;
+
+	//_req_Data();
+
+	//----------;
+
+	//--------------------------------------------------this;
+	var _ = _this;
+
+		_.__el = $el_ul;
+
+		_.dispose = _dispose;
+
+		_.req_Data = _req_Data;
+
+		_.setData = _setData;
+		_.setRootElementAndCtrl = _setRootElementAndCtrl;
+
+		_.getRootElement = _getRootElement
+		_.setRootElement = _setRootElement
+		_.getRootElementCtrl = _getRootElementCtrl
+		_.setRootElementCtrl = _setRootElementCtrl
+	//--------------------------------------------------this;
+
+	return _;
+};
+
+//----------------------------------------------------------------------------------------------------;
+if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

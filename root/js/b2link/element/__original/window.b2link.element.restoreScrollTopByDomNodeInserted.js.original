@@ -1,0 +1,42 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2link/element/window.b2link.element.restoreScrollTopByDomNodeInserted.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * target HTMLElement를 removeChild할 시에 scrollTop를 기억한다.
+ * target HTMLElement를 appendChild할 시에 기억해놓은 scrollTop를 적용한다.
+ * 1회성이다.
+ * 1번 복원하고 이벤트는 자동으로 제거된다.
+ * @function
+ * @param {HTMLElement} domNodeElement HTMLElement
+ * @param {HTMLElement} evtElement HTMLElement
+ */
+window.b2link.element.restoreScrollTopByDomNodeInserted = function( domNodeElement, evtElement )
+{
+	//window.TtwLog.timeStamp( "---- [ S ] - window.b2link.element.restoreScrollTopByDomNodeInserted():void----------" );
+
+	var _evt_DOMNodeInserted = function( e ){
+		console.log( evtElement );
+		domNodeElement.removeEventListener( "DOMNodeInserted", _evt_DOMNodeInserted, false );
+		domNodeElement.removeEventListener( "DOMNodeRemoved", _evt_DOMNodeRemoved, false );
+		console.log( evtElement.__scrollTop );
+		evtElement.scrollTop = evtElement.__scrollTop;
+	};
+
+	var _evt_DOMNodeRemoved = function( e ){
+		console.log( evtElement );
+		console.log( evtElement.scrollTop );
+		if( evtElement.scrollTop ) evtElement.__scrollTop = evtElement.scrollTop;
+		else if( !evtElement.scrollTop && evtElement.__scrollTop ) evtElement.scrollTop = evtElement.__scrollTop;
+	};
+
+	domNodeElement.addEventListener( "DOMNodeInserted", _evt_DOMNodeInserted, false, 0, true );
+	domNodeElement.addEventListener( "DOMNodeRemoved", _evt_DOMNodeRemoved, false, 0, true );
+
+	//window.TtwLog.timeStamp( "---- [ E ] - window.b2link.element.restoreScrollTopByDomNodeInserted():void----------" );
+};
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

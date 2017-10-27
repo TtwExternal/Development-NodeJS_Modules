@@ -1,0 +1,23 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2link/uri/window.b2link.uri.getURIReplaceSharp.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * @function
+ * @param {String} s 문자열
+ * @return {String}
+ * #을 !MzU=!로 변경
+ * &을 !Mzg=!로 변경
+ */
+window.b2link.uri.getURIReplaceSharp = function( s )
+{
+	//window.TtwLog.timeStamp( "---- [ S ] - window.b2link.uri.getURIReplaceSharp():{String}----------" );
+
+	//window.TtwLog.timeStamp( "---- [ E ] - window.b2link.uri.getURIReplaceSharp():{String}----------return s;" );
+	return s.replace( /#/gi, "!MzU=!" ).replace( /&/gi, "!Mzg=!" );
+};
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

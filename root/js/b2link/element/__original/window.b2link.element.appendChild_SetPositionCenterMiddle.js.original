@@ -1,0 +1,78 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2link/element/window.b2link.element.appendChild_SetPositionCenterMiddle.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * parentElement에 element 객체를 추가한다.
+ * 추가한 객체를 parentElement의 정 한가운데에 배치한다.
+ * @function
+ * @param {HTMLElement} p parent HTMLElement
+ * @param {HTMLElement} c element HTMLElement
+ * @param {Number} time 1000이 1초 default 300
+ */
+window.b2link.element.appendChild_SetPositionCenterMiddle = function( p, c, time )
+{
+	//window.TtwLog.timeStamp( "---- [ S ] - window.b2link.element.appendChild_SetPositionCenterMiddle():void----------" );
+
+	if( p == window.b2link.ui_modal.modal_content )
+	{
+		window.b2link_ui.message.error( "Modal에서는 이 API를 사용할수 없다." );
+		return;
+	}
+
+	try
+	{
+		window.b2link.element.appendChild_SetPositionCenterMiddle._timeout0 = time ? time : window.b2link.element.appendChild_SetPositionCenterMiddle._timeout0;
+
+		/*/
+		//c.addEventListener( "CssRuleViewRefreshed", window.b2link.element.appendChild_SetPositionCenterMiddle._evt, false, 0, true );
+		//c.addEventListener( "DOMNodeInsertedIntoDocument", window.b2link.element.appendChild_SetPositionCenterMiddle._evt, false, 0, true );
+		c.addEventListener( "resize", window.b2link.element.appendChild_SetPositionCenterMiddle._evt, false, 0, true );
+		window.b2link.element.appendChild( p, c );
+		/*/
+		window.b2link.element.appendChild( p, c );
+		window.b2link.element.setPosition_CenterMiddle_FromParent__NMinus( c );
+
+		var f0 = function(){
+			window.TtwLog.warn( f0._count++ );
+			window.b2link.element.setPosition_CenterMiddle_FromParent__NMinus( c );
+			//if( c.offsetLeft > 0 && c.offsetTop > 0 ) return;
+			if( c.offsetLeft >= 0 && c.offsetTop >= 0 ) return;
+			f0();
+		};
+		f0._count = 0;
+
+		setTimeout( f0, window.b2link.element.appendChild_SetPositionCenterMiddle._timeout0 );
+		//*/
+	}
+	catch( er )
+	{
+		window.b2link_ui.message.error( "window.b2link.element.appendChild_SetPositionCenterMiddle Error : " + er );
+	}
+
+	//window.TtwLog.timeStamp( "---- [ E ] - window.b2link.element.appendChild_SetPositionCenterMiddle():void----------" );
+};
+window.b2link.element.appendChild_SetPositionCenterMiddle._timeout0 = 50;
+window.b2link.element.appendChild_SetPositionCenterMiddle._evt = function( e )
+{
+	var t = e.target;
+		//t.removeEventListener( "CssRuleViewRefreshed", arguments.callee, false );
+		//t.removeEventListener( "DOMNodeInsertedIntoDocument", arguments.callee, false );
+		//t.removeEventListener( "resize", arguments.callee, false );
+
+	var f0 = function(){
+		window.TtwLog.warn( f0._count++ );
+		window.b2link.element.setPosition_CenterMiddle_FromParent__NMinus( t );
+		if( t.offsetLeft > 0 && t.offsetTop > 0 ) return;
+		f0();
+	};
+	f0._count = 0;
+
+	setTimeout( f0, window.b2link.element.appendChild_SetPositionCenterMiddle._timeout0 );
+};
+window.b2link.element.appendChild_SetPositionCenterMiddle._evt._count = 0;
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

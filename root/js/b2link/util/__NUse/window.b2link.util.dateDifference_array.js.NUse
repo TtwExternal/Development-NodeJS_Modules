@@ -1,0 +1,33 @@
+//----------------------------------------------------------------------------------------------------;
+var fileNm = "js/b2link/util/window.b2link.util.dateDifference_array.js";
+if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * Calculator Date difference
+ * @function
+ * @param {Array} from [ 2017, 2, 4 ]
+ * @param {Array} to [ 2017, 2, 5 ]
+ * @return "" or number
+ * @author James
+ */
+window.b2link.util.dateDifference_array = function( date_arr1, date_arr2 )
+{
+	window.JamesLog.timeStamp( "---- [ S ] - window.b2link.util.dateDifference_array():{String}----------" );
+
+	if( !Array.isArray( date_arr1 ) || !Array.isArray( date_arr2 ) ) return "";
+	if( date_arr1.length < 3 || date_arr2.length < 3 ) return "";
+
+	var d1 = new Date( date_arr1[ 0 ], date_arr1[ 1 ], date_arr1[ 2 ] );
+	var d2 = new Date( date_arr2[ 0 ], date_arr2[ 1 ], date_arr2[ 2 ] );
+
+	var diff_day = d2 - d1;
+	var d_time = 1000 * 60 * 60 * 24;
+
+	window.JamesLog.timeStamp( "---- [ S ] - window.b2link.util.dateDifference_array():{String}----------return parseInt( diff_day / d_time );" );
+	return parseInt( diff_day / d_time );
+};
+
+//----------------------------------------------------------------------------------------------------;
+if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

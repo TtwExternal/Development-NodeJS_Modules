@@ -1,0 +1,22 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2link/util/window.b2link.util.importHTMLJSCSS.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * *.html을 불러와서 targetElement에 appendChild 한다.
+ * *.js를 불러와서 실행시킨다.
+ * js를 작성하는 규칙이 존재한다. js상에서는 htmlElement를 Parameter로 받게 된다.
+ * *.css를 불러와서 index.html의 <head>에 삽입 한다.
+ * @function
+ * @param {String} htmlURL HTML File URL
+ * @param {String} jsURL JS File URL
+ * @param {String} cssURL CSS File URL
+ * @param {String} targetElementID
+ * @return {*}
+ */
+window.b2link.util.importHTMLJSCSS = SUtilTemplateHTML.addHTMLJSCSS__URL_Return;
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

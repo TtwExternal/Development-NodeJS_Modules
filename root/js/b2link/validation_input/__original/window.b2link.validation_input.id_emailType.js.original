@@ -1,0 +1,30 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2link/validation_input/window.b2link.validation_input.id_emailType.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+(function(){
+
+	var _regExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+	/**
+	 * @function
+	 * @param {String} id
+	 * @return {Object} { r : {Boolean}, m : {String} } r - result, m - message
+	 */
+	window.b2link.validation_input.id_emailType = function( id )
+	{
+		//window.TtwLog.timeStamp( "---- [ S ] - window.b2link.validation_input.id_emailType():{Object}----------" );
+
+		var r = { r : 1, m : "" };
+
+		if( !id.match( _regExp ) ){ r.r = 0; r.m = "아이디 구문 오류"; return r; }
+
+		//window.TtwLog.timeStamp( "---- [ E ] - window.b2link.validation_input.id_emailType():{Object}----------return r;" );
+		return r;
+	};
+})();
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

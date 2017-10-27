@@ -1,0 +1,5 @@
+var r = [];
+
+db.getSiblingDB( "<!=nm_db=!>" ).getCollection( "<!=nm_col=!>" ).find( <!=data=!> ).skip( <!=skip=!> ).limit( <!=limit=!> ).forEach( function( doc ){ r.push( doc ); });
+
+return r;

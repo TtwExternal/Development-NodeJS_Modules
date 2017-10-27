@@ -1,0 +1,39 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2link/element/window.b2link.element.injectValueForListItems.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+(function(){
+	var _f = window.b2link.element.injectValueForListItem;
+
+	/**
+	 * element에 children 객체에 주어진 Array Data[ i ]를 "list_item_value" instance명으로 주입한다.
+	 * @function
+	 * @param {HTMLElement} t HTMLElement
+	 * @param {Array} data
+	 */
+	window.b2link.element.injectValueForListItems = function( t, data )
+	{
+		//////////window.TtwLog.timeStamp( "---- [ S ] - window.b2link.element.injectValueForListItems():void----------" );
+
+		var a;
+		//<Style>가 들어있는 케이스;
+		if( t.children[ 0 ] && "STYLE" == t.children[ 0 ].tagName )
+		{
+			a = [];
+			var b = t.children;
+			var i=0, iLen=b.length;
+			for( ; i<iLen; ++i ) if( "STYLE" != b[ i ].tagName ) a.push( b[ i ] );
+		}
+		else a = t.children;
+
+		var i=0, iLen=( a.length > data.length ) ? data.length : a.length;
+		for( ; i<iLen; ++i ) _f( a[ i ], data[ i ] );
+
+		//////////window.TtwLog.timeStamp( "---- [ E ] - window.b2link.element.injectValueForListItems():void----------" );
+	};
+})();
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

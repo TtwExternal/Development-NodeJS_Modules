@@ -1,0 +1,26 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2link/common/window.b2link.common.setInterval_dispatchEvent.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * Interval을 구동한다.
+ * 대상 HTMLElement에서 window.b2link.event.INTERVAL_START Event를 Dispatch 한다.
+ * @function
+ * @param {Function} fn
+ * @param {Number} time
+ * @param {HTMLElement} t
+ * @return {Number}
+ */
+window.b2link.common.setInterval_dispatchEvent = function( fn, time, t )
+{
+	//////////window.TtwLog.timeStamp( "---- [ S ] - window.b2link.common.setInterval_dispatchEvent():{Number}----------" );
+	//////////window.TtwLog.timeStamp( "---- [ E ] - window.b2link.common.setInterval_dispatchEvent():{Number}----------" );
+	var n = setInterval( fn, time );
+	if( t ) window.b2link.event.dispatchCustomEvent( t, window.b2link.event.INTERVAL_START, n );
+	return n;
+};
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

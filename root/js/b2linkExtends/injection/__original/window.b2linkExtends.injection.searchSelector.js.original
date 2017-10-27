@@ -1,0 +1,21 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2linkExtends/injection/window.b2linkExtends.injection.searchSelector.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * @function
+ * @param {HTMLElement} t target
+ */
+window.b2linkExtends.injection.searchSelector = function( t )
+{
+	//////////window.TtwLog.timeStamp( "---- [ S ] - window.b2linkExtends.injection.searchSelector():void----------" );
+
+	window.b2linkExtends.injection.hide_show__el_and_modal( t );
+
+	//////////window.TtwLog.timeStamp( "---- [ E ] - window.b2linkExtends.injection.searchSelector():void----------" );
+};
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

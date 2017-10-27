@@ -1,0 +1,40 @@
+//----------------------------------------------------------------------------------------------------;
+var fileNm = "./js/b2link/date/window.b2link.date.dateFormatFromDateArray.js";
+if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * String format
+ * @function
+ * @param {Array} Date Array [ 2017, 2, 10 ]
+ * @return {String} {yyyy-mm-dd} / {yyyy-mm-dd hh:mi:ss}
+ * @author James
+ */
+window.b2link.date.dateFormatFromDateArray = function( d )
+{
+	window.JamesLog.timeStamp( "---- [ S ] - window.b2link.date.dateFormatFromDateArray():{String}----------" );
+
+	if( !Array.isArray( d ) ) return "";
+
+	if( d.length < 3 ) return "";
+
+	var addZero = function( n )
+	{
+		if( n < 10 ) n = "0" + n;
+		return n;
+	};
+
+	var year = d[ 0 ];
+	var month = addZero( d[ 1 ] );
+	var day = addZero( d[ 2 ] );
+
+	//var formattedDate = `${year}-${month}-${day}`;
+	var formattedDate = year + "-" + month + "-" + day;
+
+	window.JamesLog.timeStamp( "---- [ E ] - window.b2link.date.dateFormatFromDateArray():{String}----------return formattedDate;" );
+	return formattedDate;
+};
+
+//----------------------------------------------------------------------------------------------------;
+if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

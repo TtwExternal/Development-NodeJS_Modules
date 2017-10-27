@@ -1,0 +1,100 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2linkExtends/element/window.b2linkExtends.element.showAndModal_Sync.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * Common Modal을 화면에 표출한 후 HTMLElement를 표출한다.
+ * @function
+ * @example
+ * <code>
+	//----------Modal 객체 전환;
+	var modal0 = window.b2link_ui.selector.list.category.category_partner_buyer();
+	var modal0Ctrl = modal0[ 1 ];
+
+	var modal1 = window.b2link_ui.selector.partner.partner_person();
+	var modal1Ctrl = modal1[ 1 ];
+
+	var modal0 = window.b2link_ui.selector.list.category.category_partner_buyer();
+
+		modal0Ctrl.addEvent_mClick( function( li ){
+		console.log( "메롱" );
+		console.log( li );
+		console.log( li.list_item_value );
+
+		modal1Ctrl.showAndModal();
+	});
+
+	//----------다중 Modal 객체;
+	var o0 =  window.b2link_ui.selector.table.list_static.country();
+	var o1 = window.b2link_ui.selector.list.list_static.country();
+	var o0c = o0[ 1 ];
+	var o1c = o1[ 1 ];
+	o0c.showAndModal( false );
+	o1c.showAndModal( false );
+
+	o0c.showAndModal_MoveCurrentChildren();
+	o1c.showAndModal_MoveCurrentChildren();
+ * </code>
+ */
+window.b2linkExtends.element.showAndModal_Sync = function( bRemoveAllChildren )
+{
+	//////////window.TtwLog.timeStamp( "---- [ S ] - window.b2linkExtends.element.showAndModal_Sync():void----------" );
+	var t = this.__el;
+
+	//window.b2link.element.show( t );
+	window.b2link.ui_modal.appendChild( t, bRemoveAllChildren );
+	window.b2link.ui_modal.show();
+	window.b2link.element.show( t );
+
+	clearTimeout( window.b2linkExtends.element.showAndModal_Sync._timeout0 );
+
+	/*/
+	var _t = window.b2linkExtends.element.showAndModal_Sync._t;
+	if( _t && _t != t )
+	{
+		window.b2link.element.show( window.b2linkExtends.element.showAndModal_Sync._t );
+		window.b2link.element.setPosition_CenterMiddle_FromBody__NMinus( _t );
+	}
+	//*/
+
+	window.b2linkExtends.element.showAndModal_Sync._t = t;
+
+	//window.b2link.ui.APPEND_CHILD_TARGET_ELEMENT를 기준으로 FullSize View객체를 변경한다.;
+	window.b2link.ui_modal.setPositionSize__FULL_SIZE_MODE__In_APPEND_CHILD_TARGET_ELEMENT( t );
+
+	//t.style.opacity = 1;
+	//window.getComputedStyle( t ).opacity;
+	window.b2link.event.dispatchCE__SHOWED_EL( t, { _ : this } );
+
+	//*/
+	//if( t.offsetLeft == 0 || t.offsetTop == 0 )
+	{
+		window.b2linkExtends.element.showAndModal_Sync._timeout0 = setTimeout( function(){
+				window.b2link.element.setPosition_CenterMiddle_FromBody__NMinus( t );
+			}
+		, 300 );
+	}
+	//*/
+//	window.b2linkExtends.element.showAndModal_Sync._timeout0 = setTimeout( function(){
+//			window.b2link.element.setPosition_CenterMiddle_FromBody__NMinus( t );
+//			//*/
+//			window.b2link.element.show( t );
+//			//t.style.opacity = 1;
+//			//window.getComputedStyle( t ).opacity;
+//			window.b2link.element.setPosition_CenterMiddle_FromBody__NMinus( t );
+//			/*/
+//			window.b2link.element.setPosition_CenterMiddle_FromBody__NMinus( t );
+//			window.b2link.element.show( t );
+//			//*/
+//		}
+//	, 300 );
+
+	//////////window.TtwLog.timeStamp( "---- [ E ] - window.b2linkExtends.element.showAndModal_Sync():void----------" );
+};
+window.b2linkExtends.element.showAndModal_Sync._t = null;
+window.b2linkExtends.element.showAndModal_Sync._timeout0 = 0;
+
+//----------------------------------------------------------------------------------------------------;
+if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;

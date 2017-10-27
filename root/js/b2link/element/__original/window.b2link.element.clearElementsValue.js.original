@@ -1,0 +1,51 @@
+//----------------------------------------------------------------------------------------------------;
+//var fileNm = "js/b2link/element/window.b2link.element.clearElementsValue.js";
+//if( console ) console.log( "[ S ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
+
+/**
+ * Element.value 값을 ""으로 초기화 한다.
+ * @function
+ * @param {Object} t HTMLElement들이 존재하는 Object
+ * @param {*} defaultValue ""
+ * @return {Object}
+ */
+window.b2link.element.clearElementsValue = function( t, defaultValue )
+{
+	window.TtwLog.timeStamp( "---- [ S ] - window.b2link.element.clearElementsValue():{Object}----------" );
+
+	defaultValue = defaultValue || "";
+
+	var io;
+	try
+	{
+		for( var s in t )
+		{
+			io = t[ s ];
+			if( io.tagName )
+			{
+				window.TtwLog.timeStamp( "className0 : " + io.className );
+				io.value = "";
+			}
+			else
+			{
+				for( var s0 in io )
+				{
+					window.TtwLog.timeStamp( "className1 : " + io[ s0 ].className );
+					io[ s0 ].value = "";
+				}
+			}
+		}
+	}
+	catch( e )
+	{
+		window.b2link_ui.message.error( "window.b2link.element.clearElementsValue Error : " + e );
+	}
+
+	window.TtwLog.timeStamp( "---- [ E ] - window.b2link.element.clearElementsValue():{Object}----------return t;" );
+	return t;
+};
+
+//----------------------------------------------------------------------------------------------------;
+//if( console ) console.log( "[ E ] - " + fileNm + "----------" );
+//----------------------------------------------------------------------------------------------------;
